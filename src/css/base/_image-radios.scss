@@ -1,0 +1,56 @@
+.image-radios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.image-radio {
+    position: relative;
+    width: calc(100% / 3 - 16px / 3);
+    z-index: auto;
+
+    input {
+        position: absolute;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+
+        &:checked ~ .image-radio__image {
+            border-color: var(--primary-a);
+            box-shadow: 0 0 8px 0 rgba(#00A894, 0.5);
+            opacity: 1;
+        }
+
+        &:not(:disabled) ~ .image-radio__image {
+            cursor: pointer;
+        }
+
+        &:disabled ~ .image-radio__image {
+            opacity: 0.6;
+            user-select: none;
+        }
+
+        &:not(:checked) ~ .image-radio__image {
+            svg {
+                fill: var(--grey);
+
+                path {
+                    fill: var(--grey);
+                }
+            }
+        }
+    }
+
+    &__image {
+        align-items: center;
+        border-radius: 12px;
+        background-color: var(--black);
+        border: 1px solid transparent;
+        display: flex;
+        justify-content: center;
+        min-height: 120px;
+        padding: 12px;
+        opacity: 0.5;
+    }
+}

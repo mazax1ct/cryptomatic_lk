@@ -1,0 +1,25 @@
+$sm: 768px;
+$md: 1024px;
+$hd: 1280px;
+$lg: 1400px;
+$xlg: 1600px;
+$fhd: 1900px;
+
+:root {
+    --light: #f2f2f2;
+    --comfy-reading: #ccc;
+    --grey: #6f6f6f;
+    --background: #303030;
+    --underlay: #272727;
+    --darkgrey: #242424;
+    --black: #1f1f1f;
+    --primary: #00d7b0;
+    --primary-a: #00a894;
+    --f-warning: #c4334d;
+    --main_font_family: 'Roboto', Arial, sans-serif;
+    --shadow: 0 4px 4px 0 rgba(0,0,0, 0.04);
+    --section_vertical_gap: 40px;
+    @media(min-width: $hd) {
+        --section_vertical_gap: 80px;
+    }
+}

@@ -1,0 +1,39 @@
+.main-page {
+    .footer {
+        background-color: rgba(0,0,0,0.16);
+    }
+}
+
+.footer {
+    flex-shrink: 0;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.53846;
+
+    &__container {
+        padding: 24px;
+        text-align: center;
+        @media(min-width: $md) {
+            align-items: flex-end;
+            display: flex;
+            padding: 40px 48px;
+            text-align: left;
+        }
+    }
+
+    &__address {
+        margin-right: auto;
+        @media(max-width: $md - 1px) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__contacts {
+        @media(min-width: $md) {
+            margin-right: 92px;
+        }
+        @media(max-width: $md - 1px) {
+            margin-bottom: 24px;
+        }
+    }
+}

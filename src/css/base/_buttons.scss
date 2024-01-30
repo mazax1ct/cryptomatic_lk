@@ -1,0 +1,277 @@
+.button {
+    align-items: center;
+    border: 1px solid transparent;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 1.5;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    z-index: auto;
+
+    svg {
+        height: 16px;
+        min-width: 16px;
+        transition: fill 0.3s;
+        width: 16px;
+    }
+
+    span,
+    svg {
+        position: relative;
+        z-index: 2;
+    }
+
+    &.disabled,
+    &:disabled,
+    &[data-disabled] {
+        background-color: var(--background);
+        color: var(--grey);
+        cursor: default;
+        pointer-events: none;
+
+        &::after {
+            display: none;
+        }
+
+        svg {
+            fill: var(--grey);
+        }
+
+        &.button--bordered {
+            border-color: var(--grey);
+            background-color: transparent;
+            color: var(--grey);
+
+            svg {
+                fill: var(--grey);
+            }
+        }
+    }
+
+    &--red {
+        background-color: var(--f-warning);
+
+        svg {
+            fill: #fff;
+        }
+        @include hover {
+            color: #fff;
+        }
+
+        &.button--bordered {
+            color: var(--f-warning);
+            border-color: var(--f-warning);
+
+            svg {
+                fill: var(--f-warning);
+            }
+            @include hover {
+                background-color: var(--f-warning);
+                color: #fff;
+
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &--green {
+        background-color: var(--primary-a);
+
+        svg {
+            fill: #fff;
+        }
+        @include hover {
+            color: #fff;
+        }
+
+        &.button--bordered {
+            color: var(--primary);
+            border-color: var(--primary-a);
+
+            svg {
+                fill: var(--primary);
+            }
+            @include hover {
+                background-color: var(--primary-a);
+                color: #fff;
+
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &--bordered {
+        background-color: transparent;
+    }
+
+    &--h_32 {
+        border-radius: 8px;
+        font-size: 14px;
+        height: 32px;
+        padding: 4px 16px;
+
+        svg {
+            height: 16px;
+            min-width: 16px;
+            width: 16px;
+        }
+
+        &.button--square {
+            width: 32px;
+        }
+    }
+
+    &--h_36 {
+        border-radius: 8px;
+        font-size: 14px;
+        height: 36px;
+        padding: 4px 16px;
+
+        svg {
+            height: 16px;
+            min-width: 16px;
+            width: 16px;
+        }
+
+        &.button--square {
+            width: 36px;
+        }
+    }
+
+    &--h_40 {
+        border-radius: 10px;
+        height: 40px;
+        padding: 8px 24px;
+
+        &.button--square {
+            width: 40px;
+        }
+    }
+
+    &--h_48 {
+        border-radius: 12px;
+        font-size: 16px;
+        height: 48px;
+        padding: 12px 24px;
+
+        &.button--square {
+            width: 48px;
+        }
+    }
+
+    &--h_56 {
+        border-radius: 16px;
+        font-size: 20px;
+        height: 56px;
+        padding: 14px 48px;
+
+        svg {
+            height: 24px;
+            min-width: 24px;
+            width: 24px;
+        }
+
+        &.button--square {
+            width: 56px;
+        }
+    }
+
+    &--green,
+    &--red {
+        position: relative;
+
+        &::after {
+            bottom: 0;
+            background-color: rgba(#000, 0.1);
+            content: '';
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+        }
+        @include hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.link-button {
+    @include button-reset;
+    @include active-area;
+    color: var(--primary-a);
+    position: relative;
+    transition: color 0.3s;
+    z-index: auto;
+    @include hover {
+        color: var(--primary);
+    }
+
+    &.disabled,
+    &:disabled,
+    &[data-disabled] {
+        color: var(--grey);
+        cursor: default;
+        pointer-events: none;
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.fancy-button {
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid rgba(#fff, 0.1);
+    border-bottom: none;
+    background: linear-gradient(180deg, rgba(#fff, 0.2) 0%, rgba(#fff, 0.07) 49.48%, rgba(#fff, 0) 54.69%), radial-gradient(221.88% 221.88% at 50% 0%, rgba(51, 253, 216, 0.8) 0%, rgba(0, 60, 45, 0) 67.19%), #007466;
+    filter: drop-shadow(0 0 12px 0 rgba(0, 168, 148, 0.25));
+    color: #fff;
+    display: inline-flex;
+    font-size: 18px;
+    height: 64px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px 30px;
+    position: relative;
+    z-index: auto;
+
+    &::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='228' height='56' viewBox='0 0 228 56' fill='none'%3E%3Cpath d='M0 45.7707C12.1455 41.7109 43.4325 44.9272 79.5182 48.6368C135.095 54.35 202.056 61.2335 228 44.5074V0H0V45.7707Z' fill='white' fill-opacity='0.08'/%3E%3C/svg%3E");
+        content: '';
+        height: 56px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+
+    &:hover {
+        color: #fff;
+    }
+}

@@ -1,0 +1,39 @@
+.tabs-menu {
+    overflow-x: auto;
+
+    &__list {
+        @include list-reset;
+        align-items: center;
+        display: flex;
+        gap: 8px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+            width: 0;
+        }
+    }
+
+    &__item {}
+
+    &__link {
+        align-items: center;
+        border-bottom: 4px solid transparent;
+        color: var(--grey);
+        display: flex;
+        font-weight: 500;
+        min-height: 48px;
+        padding-left: 8px;
+        padding-right: 8px;
+        white-space: nowrap;
+        @include hover {
+            color: var(--light);
+        }
+
+        &.is-active {
+            border-bottom-color: var(--primary);
+            color: var(--light);
+        }
+    }
+}

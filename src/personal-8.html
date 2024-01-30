@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>CRYPTOBOT</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts_preload.html
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <main class="page-content">
+        <div class="personal">
+            <div class="personal__left">
+                //= template/personal-left.html
+            </div>
+
+            <div class="personal__right">
+                <div class="statistics">
+                    <div class="box">
+                        <form class="filter" action="">
+                            <div class="filter__item">
+                                <div class="radio-buttons">
+                                    <label class="radio-button">
+                                        <input type="radio" name="period" value="all">
+                                        <span class="radio-button__text">За все время</span>
+                                    </label>
+                                    <label class="radio-button">
+                                        <input type="radio" name="period" value="days_30">
+                                        <span class="radio-button__text">30 дней</span>
+                                    </label>
+                                    <label class="radio-button">
+                                        <input type="radio" name="period" value="days_7">
+                                        <span class="radio-button__text">7 дней</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter__item">
+                                <div class="input">
+                                    <input id="start" class="js-calendar-start input__input input__input--calendar" type="text" name="" value="" placeholder="Дата начала периода">
+                                </div>
+                            </div>
+                            <div class="filter__item">
+                                <div class="input">
+                                    <input id="end" class="js-calendar-end input__input input__input--calendar" type="text" name="" value="" placeholder="Дата окончания периода">
+                                </div>
+                            </div>
+                            <div class="filter__item">
+                                <div class="select-wrapper">
+                                    <select class="js-select">
+                                        <option value="1">Все биржи</option>
+                                        <option value="2">HTX</option>
+                                        <option value="3">ByBit</option>
+                                        <option value="4">Bitget</option>
+                                        <option value="5">MEXC</option>
+                                        <option value="6">Kucoin</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="filter__item">
+                                <div class="select-wrapper">
+                                    <select class="js-select">
+                                        <option value="1">Все боты</option>
+                                        <option value="2">Осторожный трейдер</option>
+                                        <option value="3">Stonker</option>
+                                        <option value="4">Сливала</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="filter__item">
+                                <button class="button button--green button--h_48" type="button">Применить фильтры</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="statistics__columns">
+                        <div class="statistics__column-left">
+                            <div class="box">
+                                <div class="box__title-block">
+                                    <p class="box__title">Эффективность</p>
+                                </div>
+
+                                <div class="report">
+                                    <div class="report-item">
+                                        <div class="report-item__cell">ROI, %</div>
+                                        <div class="report-item__cell">
+                                            <span class="color-green">+115,90%</span>
+                                            <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#question" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="report-item">
+                                        <div class="report-item__cell">Процент успешных сделок</div>
+                                        <div class="report-item__cell">
+                                            <span>77,27%</span>
+                                            <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#question" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="report-item">
+                                        <div class="report-item__cell">Макс. просадка</div>
+                                        <div class="report-item__cell">
+                                            <span>3,69%</span>
+                                            <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#question" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="report-item">
+                                        <div class="report-item__cell">Средняя просадка</div>
+                                        <div class="report-item__cell">
+                                            <span>1,68%</span>
+                                            <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#question" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="report-item">
+                                        <div class="report-item__cell">PNL бота</div>
+                                        <div class="report-item__cell">
+                                            <span>115,56 USDT</span>
+                                            <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#question" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="report-item">
+                                        <div class="report-item__cell">Общий объем сделок</div>
+                                        <div class="report-item__cell">
+                                            <span>547</span>
+                                            <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#question" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="report-item">
+                                        <div class="report-item__cell">Частота сделок</div>
+                                        <div class="report-item__cell">
+                                            <span>15/день</span>
+                                            <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#question" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="report-item">
+                                        <div class="report-item__cell">Всего сделок</div>
+                                        <div class="report-item__cell">
+                                            <span>257</span>
+                                            <button class="info-button" type="button" title="Информация" data-tippy-content="Какая-то полезна информация">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#question" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="statistics__column-right">
+                            <div class="box box--full_height">
+                                <div class="box__title-block">
+                                    <p class="box__title">Статистика</p>
+                                </div>
+
+                                <p>Тут будет график</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="box__title-block">
+                            <p class="box__title">История сделок</p>
+                        </div>
+
+                        <table id="table_1" class="sortable stripe-table-2">
+                            <thead>
+                                <tr>
+                                    <th>Пара&nbsp;(long/short)</th>
+                                    <th>Бот</th>
+                                    <th>Дата открытия</th>
+                                    <th>Цена покупки</th>
+                                    <th>Объем</th>
+                                    <th>Цена ликвидации</th>
+                                    <th>PNL,&nbsp;%</th>
+                                    <th>Открытый/ закрытый</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-title="Пара&nbsp;(long/short)"><span>BTC/USDT long&nbsp;x5</span></td>
+                                    <td data-title="Бот"><span>Осторожный трейдер</span></td>
+                                    <td data-title="Дата&nbsp;открытия"><span>23.12.2022</span></td>
+                                    <td data-title="Цена&nbsp;покупки"><span>2.19</span></td>
+                                    <td data-title="Объем"><span>5.05</span></td>
+                                    <td data-title="Цена&nbsp;ликвидации"><span>10.10</span></td>
+                                    <td data-title="PNL,&nbsp;%"><span>5.00</span></td>
+                                    <td data-title="Открытый/закрытый"><span>on</span></td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Пара&nbsp;(long/short)"><span>BTC/USDT long&nbsp;x10</span></td>
+                                    <td data-title="Бот"><span>Stonker</span></td>
+                                    <td data-title="Дата&nbsp;открытия"><span>20.12.2022</span></td>
+                                    <td data-title="Цена&nbsp;покупки"><span>2.21</span></td>
+                                    <td data-title="Объем"><span>4.95</span></td>
+                                    <td data-title="Цена&nbsp;ликвидации"><span>10.15</span></td>
+                                    <td data-title="PNL,&nbsp;%"><span>6.00</span></td>
+                                    <td data-title="Открытый/закрытый"><span>off</span></td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Пара&nbsp;(long/short)"><span>BTC/USDT long&nbsp;x20</span></td>
+                                    <td data-title="Бот"><span>Сливала</span></td>
+                                    <td data-title="Дата&nbsp;открытия"><span>19.12.2022</span></td>
+                                    <td data-title="Цена&nbsp;покупки"><span>1.99</span></td>
+                                    <td data-title="Объем"><span>3.35</span></td>
+                                    <td data-title="Цена&nbsp;ликвидации"><span>12</span></td>
+                                    <td data-title="PNL,&nbsp;%"><span>4.00</span></td>
+                                    <td data-title="Открытый/закрытый"><span>on</span></td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Пара&nbsp;(long/short)"><span>BTC/USDT long&nbsp;x5</span></td>
+                                    <td data-title="Бот"><span>Осторожный трейдер</span></td>
+                                    <td data-title="Дата&nbsp;открытия"><span>18.12.2022</span></td>
+                                    <td data-title="Цена&nbsp;покупки"><span>2.18</span></td>
+                                    <td data-title="Объем"><span>5.55</span></td>
+                                    <td data-title="Цена&nbsp;ликвидации"><span>15</span></td>
+                                    <td data-title="PNL,&nbsp;%"><span>3.50</span></td>
+                                    <td data-title="Открытый/закрытый"><span>off</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="text-center">
+                            <button class="button button--green button--bordered button--h_48" type="button">Показать больше</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    //= template/footer.html
+
+    //= template/popups.html
+</body>
+
+//= template/scripts.html
+
+
+<script src="js/sortTable.js"></script>
+
+</html>

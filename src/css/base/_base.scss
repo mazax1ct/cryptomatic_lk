@@ -1,0 +1,354 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-family: var(--main_font_family);
+    font-weight: 400;
+    line-height: 1.6;
+    min-height: 100vh;
+    @media(min-width: $hd) {
+        font-size: 15px;
+    }
+    @media(min-width: $fhd) {
+        font-size: 16px;
+    }
+
+    &.overflow {
+        overflow: hidden;
+    }
+}
+
+.page-content {
+    flex: 1 0 auto;
+    padding: 12px;
+    @media(min-width: $hd) {
+        padding: 32px 24px;
+    }
+}
+
+.main-page {
+    background-color: var(--black);
+
+    .page-content {
+        padding: 0;
+    }
+}
+
+.form-page {
+    .page-content {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            max-height: 686px;
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+
+                .form-field--checkbox {
+                    margin-top: 0;
+                    padding-top: 16px;
+
+                    & + .form__bottom-block {
+                        margin-top: auto;
+                    }
+                }
+
+                .form__text {
+                    & + .form__bottom-link {
+                        margin-top: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.columns {
+    --gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: var(--gap);
+    @media(min-width: $hd) {
+        flex-direction: row;
+        --gap: 24px;
+    }
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        max-width: 100%;
+        @media(min-width: $hd) {
+            width: calc(50% - var(--gap) / 2);
+        }
+    }
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s;
+    @include hover {
+        color: var(--primary-a);
+    }
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+*:focus {
+    outline: none;
+}
+
+button,
+input,
+textarea {
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.25;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    @media(min-width: $hd) {
+        font-size: 40px;
+        margin-bottom: 32px;
+    }
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    @media(min-width: $hd) {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    &:not(:first-child) {
+        margin-top: 20px;
+        @media(min-width: $hd) {
+            margin-top: 40px;
+        }
+    }
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    @media(min-width: $hd) {
+        font-size: 28px;
+    }
+
+    &:not(:first-child) {
+        margin-top: 20px;
+    }
+}
+
+h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    @media(min-width: $hd) {
+        font-size: 24px;
+    }
+
+    &:not(:first-child) {
+        margin-top: 20px;
+    }
+}
+
+p {
+    margin-top: 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+hr {
+    margin: 40px 0;
+    padding: 0;
+    height: 0;
+    border: none;
+    border-top: 1px dashed rgba(#fff, 0.2);
+    @media(min-width: $hd) {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+        @media(min-width: $hd) {
+            margin-bottom: 0;
+        }
+    }
+
+    &:first-child {
+        margin-top: 0;
+        @media(min-width: $hd) {
+            margin-top: 0;
+        }
+    }
+}
+
+.color-green {
+    color: var(--primary);
+}
+
+.color-red {
+    color: var(--f-warning);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.stripe-table {
+    border-collapse: collapse;
+    line-height: 1.25;
+    text-align: left;
+    width: 100%;
+
+    th {
+        color: var(--grey);
+    }
+
+    td,
+    th {
+        font-weight: 400;
+        padding: 16px;
+    }
+
+    td {}
+
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                background-color: rgba(0,0,0,0.08);
+            }
+
+            &:nth-child(even) {}
+        }
+    }
+}
+
+.stripe-table-2 {
+    border-collapse: collapse;
+    color: var(--comfy-reading);
+    font-size: 14px;
+    line-height: 1.42857;
+    text-align: left;
+    width: 100%;
+
+    thead {
+        @media(max-width: $sm - 1px) {
+            display: none;
+        }
+    }
+
+    th {
+        background-color: var(--darkgrey);
+        color: var(--light);
+        font-weight: 500;
+
+        a {
+            align-items: center;
+            color: var(--light);
+            display: flex;
+            @include hover {
+                color: var(--primary);
+            }
+
+            .sortarrow {
+                display: inline-block;
+                height: 20px;
+                width: 16px;
+            }
+        }
+    }
+
+    td,
+    th {
+        padding: 8px;
+        @media(min-width: $sm) {
+            height: 52px;
+        }
+    }
+
+    td {
+        font-weight: 400;
+        @media(max-width: $sm - 1px) {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            height: 32px;
+            padding: 4px 8px;
+        }
+
+        &::before {
+            @media(max-width: $sm - 1px) {
+                content: attr(data-title);
+                display: block;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-child(odd) {}
+
+            &:nth-child(even) {
+                background-color: rgba(255,255,255,0.02);
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.status {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+
+    &--active {
+        --color: var(--primary);
+    }
+
+    &--not_active {
+        --color: var(--grey);
+        color: var(--color);
+    }
+
+    &--error {
+        --color: var(--f-warning);
+        color: var(--f-warning);
+    }
+
+    &::before {
+        background-color: var(--color);
+        border-radius: 50%;
+        content: '';
+        display: flex;
+        height: 12px;
+        min-width: 12px;
+        width: 12px;
+    }
+}

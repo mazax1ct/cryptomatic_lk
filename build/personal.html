@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>CRYPTOBOT</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="fonts/Roboto/subset-Roboto-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roboto/subset-Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roboto/subset-Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roboto/subset-Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <main class="page-content">
+        <div class="personal">
+            <div class="personal__left">
+                <div class="personal__header">
+                    <a class="personal__header-logo" href="#">Crypto<span class="color-green">Matic</span></a>
+                
+                    <button class="js-personal-menu-opener personal__burger" type="button" title="Меню">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#menu" />
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="personal-menu">
+                    <div class="personal-menu__inner">
+                        <div class="user-info">
+                            <svg class="user-info__avatar" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#user" />
+                            </svg>
+                            <div class="user-info__text">
+                                <p class="user-info__login">moneymaker</p>
+                                <p class="user-info__email">moneymaker@yandex.ru</p>
+                            </div>
+                            <a class="user-info__logout" href="#" title="Выйти из аккаунта">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#logout" />
+                                </svg>
+                            </a>
+                        </div>
+                
+                        <nav>
+                            <ul class="personal-menu__list">
+                                <li class="personal-menu__item">
+                                    <a class="personal-menu__link is-active" href="#">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#info" />
+                                        </svg>
+                                        <span>Данные</span>
+                                    </a>
+                                </li>
+                                <li class="personal-menu__item">
+                                    <a class="personal-menu__link" href="#">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#learn" />
+                                        </svg>
+                                        <span>Обучающий курс</span>
+                                    </a>
+                                </li>
+                                <li class="personal-menu__item">
+                                    <a class="personal-menu__link" href="#">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#wallet" />
+                                        </svg>
+                                        <span>Пополнить</span>
+                                    </a>
+                                </li>
+                                <li class="personal-menu__item">
+                                    <span class="personal-menu__link is-disabled">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#wrench" />
+                                        </svg>
+                                        <span>Инструменты</span>
+                                    </span>
+                                </li>
+                                <li class="personal-menu__item">
+                                    <a class="personal-menu__link" href="#">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#chat" />
+                                        </svg>
+                                        <span>Чаты</span>
+                                        <span class="count-badge">1</span>
+                                    </a>
+                                </li>
+                                <li class="personal-menu__item">
+                                    <a class="personal-menu__link" href="#">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#question_light" />
+                                        </svg>
+                                        <span>FAQ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                
+                        <div class="personal-menu__title">Функционал в разработке</div>
+                
+                        <ul class="personal-menu__list">
+                            <li class="personal-menu__item">
+                                <span class="personal-menu__link is-disabled">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#lock" />
+                                    </svg>
+                                    <span>КриптоБот</span>
+                                </span>
+                            </li>
+                            <li class="personal-menu__item">
+                                <span class="personal-menu__link is-disabled">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#lock" />
+                                    </svg>
+                                    <span>Копитрейдинг</span>
+                                </span>
+                            </li>
+                            <li class="personal-menu__item">
+                                <span class="personal-menu__link is-disabled">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#lock" />
+                                    </svg>
+                                    <span>Торговый индикатор</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <button class="js-personal-menu-closer personal-menu__closer" type="button" title="Закрыть меню">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#close" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="personal__right">
+                <div class="columns">
+                    <div>
+                        <div class="box">
+                            <div class="box__title-block">
+                                <p class="box__title">Аккаунт</p>
+                            </div>
+                            <form class="form" action="">
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="login">Имя аккаунта</label>
+                                    </div>
+                                    <div class="input">
+                                        <input id="login" class="input__input" type="text" name="login" value="moneymaker" placeholder="Логин">
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="email">E-mail</label>
+                                    </div>
+                                    <div class="input">
+                                        <input id="email" class="js-email-mask input__input" type="text" name="email" value="moneymaker@yandex.ru" placeholder="E-mail">
+                                    </div>
+                                </div>
+
+                                <div class="form__bottom-block">
+                                    <div class="form__buttons">
+                                        <button class="button button--green button--h_48" type="button"><span>Сохранить изменения</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="box">
+                            <div class="box__title-block">
+                                <p class="box__title">Пароль</p>
+                                <a href="#">Забыли пароль?</a>
+                            </div>
+                            <form class="form" action="">
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="old_pass">Старый пароль</label>
+                                    </div>
+                                    <div class="input">
+                                        <input id="old_pass" class="input__input" type="password" name="old_pass" value="" placeholder="Старый пароль">
+                                        <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#show_pass" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="new_pass">Новый пароль</label>
+                                    </div>
+                                    <div class="input">
+                                        <input id="new_pass" class="input__input" type="password" name="new_pass" value="" placeholder="Новый пароль">
+                                        <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#show_pass" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="renew_pass">Подтвердите новый пароль</label>
+                                    </div>
+                                    <div class="input">
+                                        <input id="renew_pass" class="input__input" type="password" name="renew_pass" value="" placeholder="Подтвердите новый пароль">
+                                        <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#show_pass" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form__bottom-block">
+                                    <div class="form__buttons">
+                                        <button class="button button--green button--h_48" type="button" disabled><span>Сохранить изменения</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box">
+                            <div class="box__title-block">
+                                <p class="box__title">Доступ к инструментам</p>
+                            </div>
+
+                            <p class="form-field color-red">Чтобы воспользоваться инструментами, Вам нужно указать свои UID и имя аккаунта Telegram</p>
+
+                            <form class="form" action="">
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="uid">UID</label>
+                                    </div>
+                                    <div class="input">
+                                        <input id="uid" class="input__input" type="text" name="uid" value="" placeholder="Введите номер">
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="telegram_login">Telegram</label>
+                                    </div>
+                                    <div class="input">
+                                        <input id="telegram_login" class="input__input" type="text" name="telegram_login" value="" placeholder="Введите имя пользователя">
+                                    </div>
+                                </div>
+
+                                <div class="form__bottom-block">
+                                    <div class="form__buttons">
+                                        <button class="button button--green button--h_48" type="button" disabled><span>Сохранить изменения</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="box">
+                            <div class="box__title-block">
+                                <p class="box__title">Обучающий курс</p>
+                            </div>
+
+                            <table class="stripe-table">
+                                <tr>
+                                    <th>Курс</th>
+                                    <td class="text-right">Куплен</td>
+                                </tr>
+                                <tr>
+                                    <th>Прогресс</th>
+                                    <td class="text-right">4/25 <a href="#">Продолжить</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__address">
+                г. Санкт-Петербург, ул. Дедлайновая 7<br>
+                ИНН 5582247836, ОГРН 2257756993449<br>
+                2023, ООО «ВанШоп»
+            </div>
+    
+            <div class="footer__contacts">
+                Техподдержка:<br>
+                <a href="mailto:texpomosh@one-shopw.com">texpomosh@one-shopw.com</a>
+            </div>
+    
+            <div class="footer__links">
+                <a href="#">Политика обработки персональных данных</a><br>
+                <a href="#">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+
+<script src="js/jquery.fancybox.min.js"></script>
+
+<script src="js/inputmask-init.js"></script>
+<script src="js/jquery.inputmask.min.js"></script>
+
+<script src="js/ddscrollspy.js"></script>
+
+<script src="js/select2.full.min.js"></script>
+<script src="js/select2-addon.js"></script>
+
+<script src="js/popper.min.js"></script>
+<script src="js/tippy-bundle.iife.min.js"></script>
+
+<script src="js/air-datepicker.js"></script>
+
+<script src="js/main.js"></script>
+
+</html>

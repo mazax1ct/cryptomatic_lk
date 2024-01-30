@@ -1,0 +1,37 @@
+.course {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    &__video {
+        width: 100%;
+        @media(min-width: $md) {
+            width: calc(62% - 4px);
+        }
+    }
+
+    &__text-block {
+        background-color: var(--darkgrey);
+        border-radius: 12px;
+        padding: 12px;
+        width: 100%;
+        @media(min-width: $md) {
+            width: calc(38% - 4px);
+        }
+        @media(min-width: $fhd) {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    }
+
+    &__title {
+        align-items: center;
+        display: flex;
+        font-weight: 500;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        color: var(--comfy-reading);
+    }
+}

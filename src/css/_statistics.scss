@@ -1,0 +1,35 @@
+.statistics {
+    & > .box,
+    .statistics__columns {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__columns {
+        @media(min-width: $md) {
+            display: flex;
+            gap: 24px;
+        }
+    }
+
+    &__column-left {
+        margin-bottom: 24px;
+        @media(min-width: $md) {
+            margin-bottom: 0;
+            width: 32%;
+        }
+
+        .report-item {
+            @media(min-width: $md) and (max-width: $lg - 1px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__column-right {
+        @media(min-width: $md) {
+            width: calc(68% - 24px);
+        }
+    }
+}

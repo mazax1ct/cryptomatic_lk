@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>CRYPTOBOT</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts_preload.html
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="form-page">
+    //= template/header.html
+
+    <main class="page-content">
+        <div class="box box--480">
+            <div class="box__title-block box__title-block--mb_40">
+                <p class="box__title">Регистрация</p>
+                <div class="socials-links">
+                    <a class="social-link" href="#" title="Вконтакте">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#vk" />
+                        </svg>
+                    </a>
+                    <a class="social-link" href="#" title="Telegram">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#tg" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <form class="form" action="">
+                <div class="form-field">
+                    <div class="form-field__title-block">
+                        <label class="form-field__title" for="email">E-mail</label>
+                    </div>
+                    <div class="input">
+                        <input id="email" class="js-email-mask input__input" type="text" name="email" value="" placeholder="E-mail">
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <div class="form-field__title-block">
+                        <label class="form-field__title" for="password">Пароль</label>
+                    </div>
+                    <div class="input">
+                        <input id="password" class="input__input" type="password" name="password" value="" placeholder="Пароль">
+                        <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#show_pass" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <div class="form-field__title-block">
+                        <label class="form-field__title" for="repassword">Подтвердите пароль</label>
+                    </div>
+                    <div class="input">
+                        <input id="repassword" class="input__input" type="password" name="repassword" value="" placeholder="Подтвердите пароль">
+                        <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#show_pass" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-field form-field--checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" name="terms">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__text">Я ознакомлен(а) и принимаю <a href="#">условия оферты</a></span>
+                    </label>
+                </div>
+
+                <div class="form__bottom-block">
+                    <div class="form__buttons form__buttons--center">
+                        <button class="button button--green button--h_48" type="button"><span>Зарегистрироваться</span></button>
+                    </div>
+                </div>
+
+                <div class="form__bottom-link">
+                    <a href="#">Войти</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    //= template/footer.html
+</body>
+
+//= template/scripts.html
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>CRYPTOBOT</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts_preload.html
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="form-page">
+    //= template/header.html
+
+    <main class="page-content">
+        <div class="box box--480">
+            <div class="box__title-block box__title-block--mb_40">
+                <p class="box__title">Вход в личный кабинет</p>
+            </div>
+
+            <form class="form" action="">
+                <div class="form-field">
+                    <div class="form-field__title-block">
+                        <label class="form-field__title" for="login">Логин / E-mail</label>
+                    </div>
+                    <div class="input">
+                        <input id="login" class="input__input" type="text" name="login" value="" placeholder="Логин / E-mail">
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <div class="form-field__title-block">
+                        <label class="form-field__title" for="password">Пароль</label>
+                    </div>
+                    <div class="input">
+                        <input id="password" class="input__input" type="password" name="password" value="" placeholder="Пароль">
+                        <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#show_pass" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-field form-field--checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" name="remember">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__text">Запомнить меня</span>
+                    </label>
+
+                    <a href="#">Забыли пароль?</a>
+                </div>
+
+                <div class="form__bottom-block">
+                    <div class="form__buttons form__buttons--center">
+                        <button class="button button--green button--h_48" type="button"><span>Войти</span></button>
+                    </div>
+                </div>
+
+                <div class="form__bottom-link">
+                    <a href="#">Зарегистрироваться</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    //= template/footer.html
+</body>
+
+//= template/scripts.html
+
+</html>

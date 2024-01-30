@@ -1,0 +1,44 @@
+.radio-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.radio-button {
+    flex-grow: 1;
+    position: relative;
+    z-index: auto;
+
+    input {
+        position: absolute;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+
+        &:checked ~ .radio-button__text {
+            background-color: var(--primary);
+            color: #fff;
+        }
+
+        &:not(:disabled) ~ .radio__text {
+            cursor: pointer;
+        }
+
+        &:disabled ~ .radio__text {
+            opacity: 0.6;
+            user-select: none;
+        }
+    }
+
+    &__text {
+        align-items: center;
+        border-radius: 12px;
+        border: 1px solid var(--primary);
+        color: var(--primary);
+        display: flex;
+        justify-content: center;
+        height: 48px;
+        padding: 12px 6px;
+    }
+}

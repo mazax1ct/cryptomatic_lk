@@ -1,0 +1,92 @@
+.form {
+    &__text {
+        color: var(--comfy-reading);
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__bottom-block {
+        align-items: center;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &--sticky {
+            background-color: var(--underlay);
+            bottom: -6px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            position: sticky;
+            top: auto;
+            z-index: 1;
+        }
+    }
+
+    &__buttons {
+        align-items: center;
+        display: flex;
+        gap: 8px;
+        margin-left: auto;
+
+        &--center {
+            margin-right: auto;
+        }
+    }
+
+    &__bottom-link {
+        margin-top: 40px;
+        text-align: center;
+
+        a {
+            @include active-area;
+            position: relative;
+            z-index: auto;
+        }
+    }
+
+    &__bottom-error {
+        color: var(--f-warning);
+    }
+
+    .image-radios {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.form-field {
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    &__title-block {
+        align-items: center;
+        display: flex;
+        gap: 8px;
+        justify-content: space-between;
+        margin-bottom: 6px;
+    }
+
+    &__title {
+        color: var(--grey);
+        display: block;
+        line-height: 1.25;
+    }
+
+    &--checkbox {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+}

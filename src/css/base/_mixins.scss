@@ -1,0 +1,48 @@
+@mixin scrollbar {
+    scrollbar-color: var(--primary-a) var(--grey);
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background-color: var(--grey);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--primary-a);
+        border-radius: 2px;
+        height: 4px;
+        width: 4px;
+    }
+}
+@mixin list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+@mixin button-reset {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+@mixin hover {
+    @media (any-hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+@mixin active-area {
+    &::after {
+        content: '';
+        height: 40px;
+        left: 50%;
+        min-width: 40px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: 1;
+    }
+}

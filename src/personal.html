@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>CRYPTOBOT</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts_preload.html
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <main class="page-content">
+        <div class="personal">
+            <div class="personal__left">
+                //= template/personal-left.html
+            </div>
+
+            <div class="personal__right">
+                <div class="columns">
+                    <div>
+                        <div class="box">
+                            <div class="box__title-block">
+                                <p class="box__title">Аккаунт</p>
+                            </div>
+                            <form class="form" action="">
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="login">Имя аккаунта</label>
+                                    </div>
+                                    <div class="input">
+                                        <input id="login" class="input__input" type="text" name="login" value="moneymaker" placeholder="Логин">
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="email">E-mail</label>
+                                    </div>
+                                    <div class="input">
+                                        <input id="email" class="js-email-mask input__input" type="text" name="email" value="moneymaker@yandex.ru" placeholder="E-mail">
+                                    </div>
+                                </div>
+
+                                <div class="form__bottom-block">
+                                    <div class="form__buttons">
+                                        <button class="button button--green button--h_48" type="button"><span>Сохранить изменения</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="box">
+                            <div class="box__title-block">
+                                <p class="box__title">Пароль</p>
+                                <a href="#">Забыли пароль?</a>
+                            </div>
+                            <form class="form" action="">
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="old_pass">Старый пароль</label>
+                                    </div>
+                                    <div class="input">
+                                        <input id="old_pass" class="input__input" type="password" name="old_pass" value="" placeholder="Старый пароль">
+                                        <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#show_pass" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="new_pass">Новый пароль</label>
+                                    </div>
+                                    <div class="input">
+                                        <input id="new_pass" class="input__input" type="password" name="new_pass" value="" placeholder="Новый пароль">
+                                        <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#show_pass" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="renew_pass">Подтвердите новый пароль</label>
+                                    </div>
+                                    <div class="input">
+                                        <input id="renew_pass" class="input__input" type="password" name="renew_pass" value="" placeholder="Подтвердите новый пароль">
+                                        <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#show_pass" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form__bottom-block">
+                                    <div class="form__buttons">
+                                        <button class="button button--green button--h_48" type="button" disabled><span>Сохранить изменения</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box">
+                            <div class="box__title-block">
+                                <p class="box__title">Доступ к инструментам</p>
+                            </div>
+
+                            <p class="form-field color-red">Чтобы воспользоваться инструментами, Вам нужно указать свои UID и имя аккаунта Telegram</p>
+
+                            <form class="form" action="">
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="uid">UID</label>
+                                    </div>
+                                    <div class="input">
+                                        <input id="uid" class="input__input" type="text" name="uid" value="" placeholder="Введите номер">
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="telegram_login">Telegram</label>
+                                    </div>
+                                    <div class="input">
+                                        <input id="telegram_login" class="input__input" type="text" name="telegram_login" value="" placeholder="Введите имя пользователя">
+                                    </div>
+                                </div>
+
+                                <div class="form__bottom-block">
+                                    <div class="form__buttons">
+                                        <button class="button button--green button--h_48" type="button" disabled><span>Сохранить изменения</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="box">
+                            <div class="box__title-block">
+                                <p class="box__title">Обучающий курс</p>
+                            </div>
+
+                            <table class="stripe-table">
+                                <tr>
+                                    <th>Курс</th>
+                                    <td class="text-right">Куплен</td>
+                                </tr>
+                                <tr>
+                                    <th>Прогресс</th>
+                                    <td class="text-right">4/25 <a href="#">Продолжить</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    //= template/footer.html
+</body>
+
+//= template/scripts.html
+
+</html>

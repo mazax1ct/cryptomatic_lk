@@ -1,0 +1,156 @@
+<h2>Попап и форма в нём, а так же тултипы, календарь, кастомный селект, чекбоксы и радиокнопки</h2>
+
+<button class="button button--green button--h_48" type="button" data-fancybox data-src="#popup"><span>Попап</span></button>
+
+<div id="popup" class="box box--560" style="display: none">
+    <div class="box__title-block">
+        <p class="box__title">Длинный заголовок в несколько строк для проверки вёрстки</p>
+        <button class="js-popup-closer box__closer" type="button" title="Закрыть">
+            <svg aria-hidden="true">
+                <use xlink:href="images/sprite.svg#close" />
+            </svg>
+        </button>
+    </div>
+
+    <form class="form" action="">
+        <div class="form-field">
+            <div class="form-field__title-block">
+                <label class="form-field__title" for="start">Дата начала периода</label>
+                <button class="info-button" type="button" title="Информация" data-tippy-content="Вы можете выбрать любую пару, которая представлена на фьючерсах. По умолчанию выбрана BTC / USDT.">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#question" />
+                    </svg>
+                </button>
+            </div>
+            <div class="input">
+                <input id="start" class="js-calendar-start input__input input__input--calendar" type="text" name="" value="" placeholder="Не указано">
+            </div>
+        </div>
+
+        <div class="form-field">
+            <div class="form-field__title-block">
+                <label class="form-field__title" for="name">Имя бота</label>
+            </div>
+            <div class="input">
+                <input id="name" class="input__input" type="text" name="" value="Stonker" placeholder="Не указано">
+            </div>
+        </div>
+
+        <div class="form-field">
+            <div class="form-field__title-block">
+                <label class="form-field__title" for="disabled">Поле выключено</label>
+            </div>
+            <div class="input">
+                <input id="disabled" class="input__input" type="text" name="" value="Stonker" placeholder="Не указано" disabled>
+            </div>
+        </div>
+
+        <div class="form-field">
+            <div class="form-field__title-block">
+                <label class="form-field__title" for="password">Пароль</label>
+            </div>
+            <div class="input">
+                <input id="password" class="input__input" type="password" name="" value="" placeholder="Пароль">
+                <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#show_pass" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="form-field">
+            <div class="form-field__title-block">
+                <label class="form-field__title" for="error">Поле с ошибкой</label>
+            </div>
+            <div class="input">
+                <input id="error" class="input__input error" type="text" name="" value="" placeholder="Не указано">
+            </div>
+            <div class="input-error">Поле не заполенено</div>
+        </div>
+
+        <div class="form-field">
+            <div class="form-field__title-block">
+                <label class="form-field__title" for="textarea">Текстареа</label>
+            </div>
+            <div class="input">
+                <textarea id="textarea" class="input__textarea" name="textarea" placeholder="Плейсхолдер"></textarea>
+            </div>
+        </div>
+
+        <div class="form-field">
+            <div class="form-field__title-block">
+                <label class="form-field__title" for="textarea_disabled">Текстареа выключена</label>
+            </div>
+            <div class="input">
+                <textarea id="textarea_disabled" class="input__textarea" name="textarea" placeholder="Плейсхолдер" disabled></textarea>
+            </div>
+        </div>
+
+        <div class="form-field">
+            <div class="form-field__title-block">
+                <label class="form-field__title" for="textarea_error">Текстареа с ошибкой</label>
+            </div>
+            <div class="input">
+                <textarea id="textarea_error" class="input__textarea error" name="textarea" placeholder="Плейсхолдер"></textarea>
+            </div>
+            <div class="input-error">Поле не заполенено</div>
+        </div>
+
+        <div class="form-field">
+            <div class="form-field__title-block">
+                <label class="form-field__title">Выпадающий список</label>
+            </div>
+            <div class="select-wrapper">
+                <select class="js-select" data-placeholder="Не выбрано">
+                    <option></option>
+                    <option value="1">Huobi</option>
+                    <option value="2">Binance</option>
+                    <option value="3">ByBit</option>
+                    <option value="4">ByBit</option>
+                    <option value="5">ByBit</option>
+                    <option value="6">ByBit</option>
+                    <option value="7">ByBit</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-field">
+            <div class="form-field__title-block">
+                <label class="form-field__title">Реинвестирование</label>
+            </div>
+            <div class="radio-group">
+                <label class="radio">
+                    <input type="radio" name="reinvest" value="y">
+                    <span class="radio__icon"></span>
+                    <span class="radio__text">Да</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="reinvest" value="n">
+                    <span class="radio__icon"></span>
+                    <span class="radio__text">Нет</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="form-field">
+            <div class="form-field__title-block">
+                <label class="form-field__title">Чекбокс</label>
+            </div>
+            <div class="checkbox-group">
+                <label class="checkbox">
+                    <input type="checkbox" name="check">
+                    <span class="checkbox__icon"></span>
+                    <span class="checkbox__text">Текст для чекбокса</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="form__bottom-block form__bottom-block--sticky">
+            <div class="form__buttons">
+                <button class="button button--green button--bordered button--h_48" type="button"><span>Отмена</span></button>
+                <button class="button button--green button--h_48" type="button"><span>Сохранить</span></button>
+            </div>
+        </div>
+    </form>
+</div>

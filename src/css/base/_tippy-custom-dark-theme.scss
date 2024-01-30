@@ -1,0 +1,27 @@
+.tippy-tooltip.custom-dark-theme {
+    background-color: var(--black);
+    border-radius: 12px;
+
+    &[data-placement^='top'] .tippy-arrow {
+        border-top-color: var(--black);
+    }
+
+    &[data-placement^='bottom'] .tippy-arrow {
+        border-bottom-color: var(--black);
+    }
+
+    &[data-placement^='left'] .tippy-arrow {
+        border-left-color: var(--black);
+    }
+
+    &[data-placement^='right'] .tippy-arrow {
+        border-right-color: var(--black);
+    }
+
+    .tippy-content {
+        color: var(--light);
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 24px;
+    }
+}
