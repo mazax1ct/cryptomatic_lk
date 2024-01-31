@@ -1,0 +1,13 @@
+.timer {
+    align-items: center;
+    color: var(--light);
+    display: flex;
+    gap: 4px;
+    font-size: 14px;
+
+    svg {
+        fill: var(--light);
+        height: 16px;
+        width: 16px;
+    }
+}

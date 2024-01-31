@@ -18,6 +18,8 @@
 @import "base/_accordion.scss";
 @import "base/_suggest.scss";
 @import "base/_count-badge.scss";
+@import "base/_timer.scss";
+@import "base/_sources.scss";
 @import "base/_tippy-custom-dark-theme.scss";
 @import "plugins/select2.css";
 @import "base/_select2-custom.scss";
@@ -25,9 +27,6 @@
 @import "base/_air-datepicker-custom.scss";
 @import "plugins/jquery.fancybox.scss";
 @import "_personal.scss";
-@import "_api-key.scss";
-@import "_bot.scss";
+@import "_calcs.scss";
 @import "_course.scss";
-@import "_statistics.scss";
-@import "_filter.scss";
 @import "_footer.scss";
