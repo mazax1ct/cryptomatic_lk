@@ -152,7 +152,7 @@
             </div>
 
             <div class="personal__right">
-                <div class="box box--full_height">
+                <div class="box">
                     <div class="box__title-block">
                         <div class="tabs-menu">
                             <ul class="tabs-menu__list">
@@ -284,7 +284,7 @@
                                     </a>
                                 </div>
 
-                                <a class="course-adds__chat button button--green button--bordered button--h_48 button--wide" href="#">Задать вопрос менеджеру</a>
+                                <a class="course-adds__chat button button--green button--bordered button--h_48 button--wide" href="javascript:void(0)" data-fancybox="manager_chat" data-src="#manager_chat">Задать вопрос менеджеру</a>
                             </div>
                         </div>
                     </div>
@@ -1225,6 +1225,82 @@
                 <div class="form__buttons">
                     <button class="js-popup-closer button button--green button--bordered button--h_48" type="button"><span>Отмена</span></button>
                     <button class="button button--green button--h_48" type="button"><span>Сохранить</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div id="manager_chat" class="box box--560" style="display: none">
+        <div class="box__title-block">
+            <p class="box__title">Вопрос менеджеру</p>
+            <button class="js-popup-closer box__closer" type="button" title="Закрыть">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close" />
+                </svg>
+            </button>
+        </div>
+    
+        <form class="form" action="">
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="title">Заголовок обращения</label>
+                </div>
+                <div class="input">
+                    <input id="title" class="input__input" type="text" name="" value="" placeholder="Введите заголовок">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="text">Текст обращения</label>
+                </div>
+                <div class="input">
+                    <textarea id="text" class="input__textarea" name="text" placeholder="Введите текст"></textarea>
+                </div>
+            </div>
+    
+            <div class="upload-files">
+                <div class="upload-file">
+                    <div class="upload-file__progress"></div>
+                    <div class="upload-file__inner">
+                        <svg class="upload-file__icon" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#clip" />
+                        </svg>
+                        <span>Загруженный документ.pdf</span>
+                    </div>
+                    <button class="upload-file__delete" type="button" title="Удалить файл">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#close" />
+                        </svg>
+                    </button>
+                </div>
+    
+                <div class="upload-file is-inprogress">
+                    <div class="upload-file__progress" style="width: 45%"></div>
+                    <div class="upload-file__inner">
+                        <svg class="upload-file__icon" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#clip" />
+                        </svg>
+                        <span>Загруженный документ.pdf</span>
+                    </div>
+                    <button class="upload-file__delete" type="button" title="Удалить файл">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#close" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    
+            <div class="form__bottom-block form__bottom-block--sticky">
+                <div class="form__buttons form__buttons--wide">
+                    <button class="form__files-add button button--green button--h_48" type="button" title="Добавить файлы">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#clip" />
+                        </svg>
+                    </button>
+    
+                    <button class="js-popup-closer button button--green button--bordered button--h_48" type="button"><span>Отмена</span></button>
+                    <button class="button button--green button--h_48" type="button"><span>Отправить</span></button>
                 </div>
             </div>
         </form>

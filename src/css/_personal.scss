@@ -1,12 +1,13 @@
 .personal {
     @media(min-width: $hd) {
-        align-items: flex-start;
         display: flex;
         flex-wrap: wrap;
+        height: 100%;
         gap: 24px;
     }
 
     &__left {
+        align-self: flex-start;
         padding-top: 70px;
         width: 100%;
         @media(min-width: $sm) {

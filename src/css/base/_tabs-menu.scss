@@ -19,14 +19,17 @@
 
     &__link {
         align-items: center;
-        border-bottom: 4px solid transparent;
+        border-bottom: 2px solid transparent;
         color: var(--grey);
         display: flex;
         font-weight: 500;
-        min-height: 48px;
+        min-height: 50px;
+        padding-top: 2px;
         padding-left: 8px;
         padding-right: 8px;
+        position: relative;
         white-space: nowrap;
+        z-index: 1;
         @include hover {
             color: var(--light);
         }
@@ -35,5 +38,18 @@
             border-bottom-color: var(--primary);
             color: var(--light);
         }
+    }
+
+    &__status {
+        border-radius: 50%;
+        background-color: var(--primary);
+        box-shadow: 0 0 4px 0 var(--primary);
+        height: 4px;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        width: 4px;
+        z-index: 1;
     }
 }

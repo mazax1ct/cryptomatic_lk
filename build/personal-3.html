@@ -152,28 +152,104 @@
             </div>
 
             <div class="personal__right">
-                <div class="box box--full_height">
-                    <div class="box__title-block">
+                <div class="notify-center">
+                    <div class="notify-center__controls">
                         <div class="tabs-menu">
                             <ul class="tabs-menu__list">
                                 <li class="tabs-menu__item">
-                                    <a class="tabs-menu__link is-active" href="#">Управление ботами</a>
+                                    <a class="tabs-menu__link is-active" href="#"><span class="tabs-menu__status"></span> Уведомления</a>
                                 </li>
                                 <li class="tabs-menu__item">
-                                    <a class="tabs-menu__link" href="#">Проверка стратегий</a>
+                                    <a class="tabs-menu__link" href="#">Переписки</a>
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="box__title-controls">
-                            <a href="#">Как настроить бота?</a>
-                            <button class="button button--green button--h_48" data-fancybox data-src="#bot_add" type="button"><span>Создать бота</span></button>
-                        </div>
+                        <ul class="notify-sections">
+                            <li class="notify-sections__item">
+                                <button class="notify-sections__button is-active" type="button">
+                                    <span>Системные уведомления</span>
+                                </button>
+                            </li>
+                            <li class="notify-sections__item">
+                                <button class="notify-sections__button" type="button">
+                                    <span>Ваш аккаунт</span>
+                                    <span class="count-badge">999</span>
+                                </button>
+                            </li>
+                            <li class="notify-sections__item">
+                                <button class="notify-sections__button" type="button">
+                                    <span>Безопасность</span>
+                                </button>
+                            </li>
+                            <li class="notify-sections__item">
+                                <button class="notify-sections__button" type="button">
+                                    <span>Новостная рассылка</span>
+                                </button>
+                            </li>
+                        </ul>
                     </div>
+                    <div class="notify-center__list">
+                        <div class="notify-list">
+                            <div class="notify-day"><span>5 декабря 2023</span></div>
+                            <div class="notify">
+                                <p class="notify__title-block">
+                                    <span class="notify__time">08:00</span>
+                                    <span class="notify__title">Обновление</span>
+                                </p>
+                                <p>Что-то было обновлено</p>
+                            </div>
+                            <div class="notify">
+                                <p class="notify__title-block">
+                                    <span class="notify__time">09:00</span>
+                                    <span class="notify__title">Очень важное обновление</span>
+                                </p>
+                                <p>
+                                    Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они
+                                    просто повторяют, пока не достигнут нужный объём.
+                                </p>
+                            </div>
 
-                    <div class="box__note">
-                        <div>
-                            <p>Добро пожаловать! Добавьте свои API-ключи от биржи, чтобы настроить своего торгового бота!</p>
+                            <div class="notify-day"><span>10 января</span></div>
+                            <div class="notify">
+                                <p class="notify__title-block">
+                                    <span class="notify__time">08:00</span>
+                                    <span class="notify__title">Обновление</span>
+                                </p>
+                                <p>Что-то было обновлено</p>
+                            </div>
+                            <div class="notify">
+                                <p class="notify__title-block">
+                                    <span class="notify__time">09:00</span>
+                                    <span class="notify__title">Очень важное обновление</span>
+                                </p>
+                                <p>
+                                    Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они
+                                    просто повторяют, пока не достигнут нужный объём.
+                                </p>
+                            </div>
+
+                            <div class="notify-day"><span>19 января</span></div>
+                            <div class="notify">
+                                <p class="notify__title-block">
+                                    <span class="notify__time">08:00</span>
+                                    <span class="notify__title">Обновление</span>
+                                </p>
+                                <p>Что-то было обновлено</p>
+                            </div>
+                            <div class="notify">
+                                <div class="notify__status"></div>
+                                <p class="notify__title-block">
+                                    <span class="notify__time">09:00</span>
+                                    <span class="notify__title">Очень важное обновление</span>
+                                </p>
+                                <p>Добавлена возможность генерировать Lorem Ipsum.</p>
+                                <p>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.</p>
+                                <p>
+                                    Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они
+                                    просто повторяют, пока не достигнут нужный объём.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1113,6 +1189,82 @@
                 <div class="form__buttons">
                     <button class="js-popup-closer button button--green button--bordered button--h_48" type="button"><span>Отмена</span></button>
                     <button class="button button--green button--h_48" type="button"><span>Сохранить</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div id="manager_chat" class="box box--560" style="display: none">
+        <div class="box__title-block">
+            <p class="box__title">Вопрос менеджеру</p>
+            <button class="js-popup-closer box__closer" type="button" title="Закрыть">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close" />
+                </svg>
+            </button>
+        </div>
+    
+        <form class="form" action="">
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="title">Заголовок обращения</label>
+                </div>
+                <div class="input">
+                    <input id="title" class="input__input" type="text" name="" value="" placeholder="Введите заголовок">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="text">Текст обращения</label>
+                </div>
+                <div class="input">
+                    <textarea id="text" class="input__textarea" name="text" placeholder="Введите текст"></textarea>
+                </div>
+            </div>
+    
+            <div class="upload-files">
+                <div class="upload-file">
+                    <div class="upload-file__progress"></div>
+                    <div class="upload-file__inner">
+                        <svg class="upload-file__icon" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#clip" />
+                        </svg>
+                        <span>Загруженный документ.pdf</span>
+                    </div>
+                    <button class="upload-file__delete" type="button" title="Удалить файл">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#close" />
+                        </svg>
+                    </button>
+                </div>
+    
+                <div class="upload-file is-inprogress">
+                    <div class="upload-file__progress" style="width: 45%"></div>
+                    <div class="upload-file__inner">
+                        <svg class="upload-file__icon" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#clip" />
+                        </svg>
+                        <span>Загруженный документ.pdf</span>
+                    </div>
+                    <button class="upload-file__delete" type="button" title="Удалить файл">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#close" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    
+            <div class="form__bottom-block form__bottom-block--sticky">
+                <div class="form__buttons form__buttons--wide">
+                    <button class="form__files-add button button--green button--h_48" type="button" title="Добавить файлы">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#clip" />
+                        </svg>
+                    </button>
+    
+                    <button class="js-popup-closer button button--green button--bordered button--h_48" type="button"><span>Отмена</span></button>
+                    <button class="button button--green button--h_48" type="button"><span>Отправить</span></button>
                 </div>
             </div>
         </form>

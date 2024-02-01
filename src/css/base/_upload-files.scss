@@ -1,0 +1,92 @@
+.upload-files {
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+}
+
+.upload-file {
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    border-radius: 12px;
+    background-color: var(--black);
+    color: var(--primary);
+    height: 48px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    &.is-inprogress {
+        color: var(--light);
+
+        .upload-file__progress {
+            display: block;
+        }
+
+        .upload-file__icon {
+            fill: var(--light);
+        }
+
+        .upload-file__delete {
+            display: none;
+        }
+    }
+
+    &__progress {
+        background: linear-gradient(to left, #10524A 0%, #10534B 100%);
+        display: none;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    &__inner {
+        display: flex;
+        gap: 8px;
+        padding: 12px 64px 12px 16px;
+        position: relative;
+        z-index: 2;
+
+        span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: calc(100% - 24px - 8px);
+        }
+    }
+
+    &__icon {
+        fill: var(--primary);
+        height: 24px;
+        transition: fill 0.3s;
+        width: 24px;
+    }
+
+    &__delete {
+        @include button-reset;
+        align-items: center;
+        display: flex;
+        height: 48px;
+        justify-content: center;
+        left: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 48px;
+        z-index: 2;
+        @include hover {
+            svg {
+                fill: var(--primary);
+            }
+        }
+
+        svg {
+            fill: var(--light);
+            height: 24px;
+            transition: fill 0.3s;
+            width: 24px;
+        }
+    }
+}
