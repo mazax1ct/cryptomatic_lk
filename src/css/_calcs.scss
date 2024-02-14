@@ -41,6 +41,7 @@
         }
 
         .input__input {
+            color: var(--light);
             padding: 8px 16px;
         }
 
@@ -99,8 +100,8 @@
         border: none;
         background-color: rgba(#fff,0.02);
         color: var(--grey);
-        font-size: 16px;
-        font-weight: 400;
+        font-size: 15px;
+        font-weight: 200;
         height: 48px;
         line-height: 1.6;
         overflow: hidden;

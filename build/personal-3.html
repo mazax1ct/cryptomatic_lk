@@ -20,10 +20,10 @@
     <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="preload" href="fonts/Roboto/subset-Roboto-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Roboto/subset-Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Roboto/subset-Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Roboto/subset-Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Geologica/subset-GeologicaRoman-ExtraLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Geologica/subset-GeologicaRoman-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Geologica/subset-GeologicaRoman-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Geologica/subset-GeologicaRoman-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -33,7 +33,9 @@
         <div class="personal">
             <div class="personal__left">
                 <div class="personal__header">
-                    <a class="personal__header-logo" href="#">Crypto<span class="color-green">Matic</span></a>
+                    <a class="personal__header-logo" href="#">
+                        <img src="images/logo.svg" alt="">
+                    </a>
                 
                     <button class="js-personal-menu-opener personal__burger" type="button" title="Меню">
                         <svg aria-hidden="true">
@@ -77,14 +79,14 @@
                                         <span>Обучающий курс</span>
                                     </a>
                                 </li>
-                                <li class="personal-menu__item">
+                                <!--<li class="personal-menu__item">
                                     <a class="personal-menu__link" href="#">
                                         <svg aria-hidden="true">
                                             <use xlink:href="images/sprite.svg#wallet" />
                                         </svg>
                                         <span>Пополнить</span>
                                     </a>
-                                </li>
+                                </li>-->
                                 <li class="personal-menu__item">
                                     <span class="personal-menu__link is-disabled">
                                         <svg aria-hidden="true">
@@ -121,15 +123,7 @@
                                     <svg aria-hidden="true">
                                         <use xlink:href="images/sprite.svg#lock" />
                                     </svg>
-                                    <span>КриптоБот</span>
-                                </span>
-                            </li>
-                            <li class="personal-menu__item">
-                                <span class="personal-menu__link is-disabled">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#lock" />
-                                    </svg>
-                                    <span>Копитрейдинг</span>
+                                    <span>Бот CRYPTOMATIC</span>
                                 </span>
                             </li>
                             <li class="personal-menu__item">
@@ -138,6 +132,14 @@
                                         <use xlink:href="images/sprite.svg#lock" />
                                     </svg>
                                     <span>Торговый индикатор</span>
+                                </span>
+                            </li>
+                            <li class="personal-menu__item">
+                                <span class="personal-menu__link is-disabled">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#lock" />
+                                    </svg>
+                                    <span>Копитрейдинг</span>
                                 </span>
                             </li>
                         </ul>
@@ -266,6 +268,25 @@
             </div>
     
             <div class="footer__contacts">
+                <div class="footer__socials">
+                    <a class="footer-social" href="#" title="Наш Telegram" target="_blank" rel="nofollow noreferrer">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#tg" />
+                        </svg>
+                    </a>
+    
+                    <a class="footer-social" href="#" title="Мы Вконтакте" target="_blank" rel="nofollow noreferrer">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#vk" />
+                        </svg>
+                    </a>
+    
+                    <a class="footer-social" href="#" title="Мы на YouTube" target="_blank" rel="nofollow noreferrer">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#yt" />
+                        </svg>
+                    </a>
+                </div>
                 Техподдержка:<br>
                 <a href="mailto:texpomosh@one-shopw.com">texpomosh@one-shopw.com</a>
             </div>

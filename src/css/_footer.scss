@@ -7,7 +7,6 @@
 .footer {
     flex-shrink: 0;
     font-size: 15px;
-    font-weight: 300;
     line-height: 1.53846;
 
     &__container {
@@ -35,5 +34,33 @@
         @media(max-width: $md - 1px) {
             margin-bottom: 24px;
         }
+    }
+
+    &__socials {
+        display: flex;
+        gap: 8px;
+        @media(max-width: $md - 0.01px) {
+            justify-content: center;
+        }
+    }
+}
+
+.footer-social {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+    @include hover {
+        svg {
+            fill: var(--primary-a);
+        }
+    }
+
+    svg {
+        fill: var(--primary);
+        height: 20px;
+        transition: fill 0.3s;
+        width: 20px;
     }
 }

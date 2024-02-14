@@ -6,7 +6,7 @@
     display: inline-flex;
     gap: 8px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     justify-content: center;
     line-height: 1.5;
     position: relative;
@@ -109,6 +109,36 @@
 
                 svg {
                     fill: #fff;
+                }
+            }
+        }
+    }
+
+    &--white {
+        background-color: #fff;
+        color: var(--f-warning);
+
+        svg {
+            fill: var(--f-warning);
+        }
+        @include hover {
+            color: var(--f-warning);
+        }
+
+        &.button--bordered {
+            color: #fff;
+            border-color: #fff;
+
+            svg {
+                fill: #fff;
+            }
+            @include hover {
+                background-color: #fff;
+                border-color: #fff;
+                color: var(--f-warning);
+
+                svg {
+                    fill: var(--f-warning);
                 }
             }
         }

@@ -1,0 +1,53 @@
+.m-calc {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @media(min-width: $md) {
+        flex-direction: row;
+    }
+
+    &__left {
+        @media(min-width: $md) {
+            width: 32.92867%;
+        }
+    }
+
+    &__right {
+        flex-grow: 1;
+
+        .box {
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 8px;
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        .form-field {
+            flex-grow: 1;
+            margin-bottom: 0;
+        }
+
+        .form-field__title {
+            @media(max-width: $xlg - 0.01px) {
+                font-size: 13px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .box {
+        background-color: var(--darkgrey);
+    }
+
+    .input__input {
+        padding-right: 16px;
+    }
+}

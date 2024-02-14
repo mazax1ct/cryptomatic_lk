@@ -25,6 +25,23 @@
             </div>
 
             <div class="personal__right">
+                <div class="box box--inline box--warning">
+                    <div class="box__title-block box__title-block--mb_0">
+                        <div class="box__title-controls">
+                            <div class="timer">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#timer"></use>
+                                </svg>
+                                21:33:28
+                            </div>
+                        </div>
+                        <p class="box__title box__title--fs_16">Ограниченное предложение!</p>
+                    </div>
+
+                    <p class="box__text">Начните занятия в течение 3 дней после регистрации и получите скидку в 10%!</p>
+
+                    <a class="button button--white button--bordered button--h_48 button--wide" href="#">Оплатить курс!</a>
+                </div>
                 <div class="columns">
                     <div>
                         <div class="box">
@@ -36,8 +53,16 @@
                                     <div class="form-field__title-block">
                                         <label class="form-field__title" for="login">Имя аккаунта</label>
                                     </div>
-                                    <div class="input">
-                                        <input id="login" class="input__input" type="text" name="login" value="moneymaker" placeholder="Логин">
+
+                                    <div class="form-field__row">
+                                        <div class="form-field__row-block">
+                                            <div class="input">
+                                                <input id="login" class="input__input" type="text" name="login" value="moneymaker" placeholder="Логин">
+                                            </div>
+                                        </div>
+                                        <div class="form-field__row-block">
+                                            <button class="button button--green button--h_48" type="button" disabled><span>Сохранить</span></button>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -45,36 +70,51 @@
                                     <div class="form-field__title-block">
                                         <label class="form-field__title" for="email">E-mail</label>
                                     </div>
-                                    <div class="input">
-                                        <input id="email" class="js-email-mask input__input" type="text" name="email" value="moneymaker@yandex.ru" placeholder="E-mail">
+
+                                    <div class="form-field__row">
+                                        <div class="form-field__row-block">
+                                            <div class="input">
+                                                <input id="email" class="js-email-mask input__input" type="text" name="email" value="moneymaker@yandex.ru" placeholder="E-mail">
+                                            </div>
+                                        </div>
+                                        <div class="form-field__row-block">
+                                            <button class="button button--green button--h_48" type="button" disabled><span>Сохранить</span></button>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="form__bottom-block">
-                                    <div class="form__buttons">
-                                        <button class="button button--green button--h_48" type="button"><span>Сохранить изменения</span></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="box">
-                            <div class="box__title-block">
-                                <p class="box__title">Пароль</p>
-                                <a href="#">Забыли пароль?</a>
-                            </div>
-                            <form class="form" action="">
                                 <div class="form-field">
                                     <div class="form-field__title-block">
-                                        <label class="form-field__title" for="old_pass">Старый пароль</label>
+                                        <label class="form-field__title" for="phone">Телефон</label>
                                     </div>
-                                    <div class="input">
-                                        <input id="old_pass" class="input__input" type="password" name="old_pass" value="" placeholder="Старый пароль">
-                                        <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
-                                            <svg aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#show_pass" />
-                                            </svg>
-                                        </button>
+
+                                    <div class="form-field__row">
+                                        <div class="form-field__row-block">
+                                            <div class="input">
+                                                <input id="phone" class="js-phone-mask input__input" type="text" name="phone" value="" placeholder="+7(___) ___ __ __">
+                                            </div>
+                                        </div>
+                                        <div class="form-field__row-block">
+                                            <button class="button button--green button--h_48" type="button" disabled><span>Сохранить</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="telegram">Telegram</label>
+                                    </div>
+
+                                    <div class="form-field__row">
+                                        <div class="form-field__row-block">
+                                            <div class="input">
+                                                <input id="telegram" class="input__input error" type="text" name="telegram" value="" placeholder="@username">
+                                            </div>
+                                            <div class="input-error">Ошибка</div>
+                                        </div>
+                                        <div class="form-field__row-block">
+                                            <button class="button button--green button--h_48" type="button" disabled><span>Сохранить</span></button>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -82,33 +122,20 @@
                                     <div class="form-field__title-block">
                                         <label class="form-field__title" for="new_pass">Новый пароль</label>
                                     </div>
-                                    <div class="input">
-                                        <input id="new_pass" class="input__input" type="password" name="new_pass" value="" placeholder="Новый пароль">
-                                        <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
-                                            <svg aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#show_pass" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="renew_pass">Подтвердите новый пароль</label>
-                                    </div>
-                                    <div class="input">
-                                        <input id="renew_pass" class="input__input" type="password" name="renew_pass" value="" placeholder="Подтвердите новый пароль">
-                                        <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
-                                            <svg aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#show_pass" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="form__bottom-block">
-                                    <div class="form__buttons">
-                                        <button class="button button--green button--h_48" type="button" disabled><span>Сохранить изменения</span></button>
+                                    <div class="form-field__row">
+                                        <div class="form-field__row-block">
+                                            <div class="input">
+                                                <input id="new_pass" class="input__input" type="password" name="new_pass" value="" placeholder="Новый пароль" autocomplete="off">
+                                                <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#show_pass" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="form-field__row-block">
+                                            <button class="button button--green button--h_48" type="button" disabled><span>Сохранить</span></button>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -120,7 +147,7 @@
                                 <p class="box__title">Доступ к инструментам</p>
                             </div>
 
-                            <p class="form-field color-red">Чтобы воспользоваться инструментами, Вам нужно указать свои UID и имя аккаунта Telegram</p>
+                            <p class="form-field color-red">Чтобы воспользоваться инструментами, Вам нужно указать свои UID с биржи BYBIT</p>
 
                             <form class="form" action="">
                                 <div class="form-field">
@@ -132,18 +159,9 @@
                                     </div>
                                 </div>
 
-                                <div class="form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="telegram_login">Telegram</label>
-                                    </div>
-                                    <div class="input">
-                                        <input id="telegram_login" class="input__input" type="text" name="telegram_login" value="" placeholder="Введите имя пользователя">
-                                    </div>
-                                </div>
-
                                 <div class="form__bottom-block">
                                     <div class="form__buttons">
-                                        <button class="button button--green button--h_48" type="button" disabled><span>Сохранить изменения</span></button>
+                                        <button class="button button--green button--h_48" type="button" disabled><span>Сохранить</span></button>
                                     </div>
                                 </div>
                             </form>

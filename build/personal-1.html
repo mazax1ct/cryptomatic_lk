@@ -20,10 +20,10 @@
     <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="preload" href="fonts/Roboto/subset-Roboto-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Roboto/subset-Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Roboto/subset-Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Roboto/subset-Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Geologica/subset-GeologicaRoman-ExtraLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Geologica/subset-GeologicaRoman-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Geologica/subset-GeologicaRoman-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Geologica/subset-GeologicaRoman-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -33,7 +33,9 @@
         <div class="personal">
             <div class="personal__left">
                 <div class="personal__header">
-                    <a class="personal__header-logo" href="#">Crypto<span class="color-green">Matic</span></a>
+                    <a class="personal__header-logo" href="#">
+                        <img src="images/logo.svg" alt="">
+                    </a>
                 
                     <button class="js-personal-menu-opener personal__burger" type="button" title="Меню">
                         <svg aria-hidden="true">
@@ -77,14 +79,14 @@
                                         <span>Обучающий курс</span>
                                     </a>
                                 </li>
-                                <li class="personal-menu__item">
+                                <!--<li class="personal-menu__item">
                                     <a class="personal-menu__link" href="#">
                                         <svg aria-hidden="true">
                                             <use xlink:href="images/sprite.svg#wallet" />
                                         </svg>
                                         <span>Пополнить</span>
                                     </a>
-                                </li>
+                                </li>-->
                                 <li class="personal-menu__item">
                                     <span class="personal-menu__link is-disabled">
                                         <svg aria-hidden="true">
@@ -121,15 +123,7 @@
                                     <svg aria-hidden="true">
                                         <use xlink:href="images/sprite.svg#lock" />
                                     </svg>
-                                    <span>КриптоБот</span>
-                                </span>
-                            </li>
-                            <li class="personal-menu__item">
-                                <span class="personal-menu__link is-disabled">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#lock" />
-                                    </svg>
-                                    <span>Копитрейдинг</span>
+                                    <span>Бот CRYPTOMATIC</span>
                                 </span>
                             </li>
                             <li class="personal-menu__item">
@@ -138,6 +132,14 @@
                                         <use xlink:href="images/sprite.svg#lock" />
                                     </svg>
                                     <span>Торговый индикатор</span>
+                                </span>
+                            </li>
+                            <li class="personal-menu__item">
+                                <span class="personal-menu__link is-disabled">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#lock" />
+                                    </svg>
+                                    <span>Копитрейдинг</span>
                                 </span>
                             </li>
                         </ul>
@@ -153,370 +155,607 @@
 
             <div class="personal__right">
                 <div class="box">
-                    <div class="box__title-block">
-                        <p class="box__title">Инструменты</p>
-                    </div>
-
-                    <div class="calcs">
-                        <div class="calc box">
-                            <div class="box__title-block">
-                                <p class="box__title">Расчет по доп. депозиту</p>
+                    <div class="tabs">
+                        <div class="box__title-block">
+                            <div class="tabs-menu">
+                                <ul class="tabs-menu__list">
+                                    <li class="tabs-menu__item">
+                                        <a class="tabs-menu__link is-active" href="javascript:void(0)" data-target="1">Grid bot</a>
+                                    </li>
+                                    <li class="tabs-menu__item">
+                                        <a class="tabs-menu__link" href="javascript:void(0)" data-target="2">Martingale</a>
+                                    </li>
+                                </ul>
                             </div>
+                        </div>
 
-                            <div class="calc__row">
-                                <div class="calc__input form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="dop_depo">Доп. депо</label>
+                        <div class="tab is-active" data-target="1">
+                            <div class="calcs">
+                                <div class="calc box">
+                                    <div class="box__title-block">
+                                        <p class="box__title">Расчет по доп. депозиту</p>
                                     </div>
-                                    <div class="input">
-                                        <input id="dop_depo" class="input__input" type="text" name="dop_depo" value="72,5">
-                                    </div>
-                                </div>
-
-                                <div class="calc__val-block">
-                                    <div class="form-field">
-                                        <div class="form-field__title-block">
-                                            <label class="form-field__title" for="percent_prosadki">Процент просадки</label>
-                                        </div>
-                                        <div class="input">
-                                            <div class="calc__val">
-                                                <span id="percent_prosadki" class="color-green">14,83%</span>
+                            
+                                    <div class="calc__row">
+                                        <div class="calc__input form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="dop_depo">Доп. депо</label>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="calc__row">
-                                <div class="calc__input form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="start_depo">Стартовый депо</label>
-                                    </div>
-                                    <div class="input">
-                                        <input id="start_depo" class="input__input" type="text" name="start_depo" value="150">
-                                    </div>
-                                </div>
-
-                                <div class="calc__val-block">
-                                    <div class="form-field">
-                                        <div class="form-field__title-block">
-                                            <label class="form-field__title" for="rab_diapazon">Рабочий диапазон</label>
-                                        </div>
-                                        <div class="input">
-                                            <div class="calc__val">
-                                                <span id="rab_diapazon" class="color-green">4 000</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="calc__row">
-                                <div class="calc__input form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="verh">Верхняя граница</label>
-                                    </div>
-                                    <div class="input">
-                                        <input id="verh" class="input__input" type="text" name="verh" value="48000">
-                                    </div>
-                                </div>
-
-                                <div class="calc__val-block">
-                                    <div class="form-field">
-                                        <div class="form-field__title-block">
-                                            <label class="form-field__title" for="shag_setki">Шаг сетки, USDT</label>
-                                        </div>
-                                        <div class="input">
-                                            <div class="calc__val">
-                                                <span id="shag_setki" class="color-green">160</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="calc__row">
-                                <div class="calc__input form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="niz">Нижняя граница</label>
-                                    </div>
-                                    <div class="input">
-                                        <input id="niz" class="input__input" type="text" name="niz" value="44000">
-                                    </div>
-                                </div>
-
-                                <div class="calc__val-block">
-                                    <div class="form-field">
-                                        <div class="form-field__title-block">
-                                            <label class="form-field__title" for="cena_likvidacii_verh">Цена ликвидации, верх</label>
-                                        </div>
-                                        <div class="calc__val-container">
                                             <div class="input">
-                                                <div class="calc__val">
-                                                    Long: <span id="cena_likvidacii_verh_long" class="color-green">40 880,00</span>
+                                                <input id="dop_depo" class="input__input" type="text" name="dop_depo" value="72,5">
+                                            </div>
+                                        </div>
+                            
+                                        <div class="calc__val-block">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="percent_prosadki">Процент просадки</label>
                                                 </div>
-                                            </div>
-                                            <div class="input">
-                                                <div class="calc__val">
-                                                    Short: <span id="cena_likvidacii_verh_short" class="color-green">55 120,00</span>
+                                                <div class="input">
+                                                    <div class="calc__val">
+                                                        <span id="percent_prosadki" class="color-green">14,83%</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="calc__row">
-                                <div class="calc__input form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="cena_otkritiya">Цена открытия</label>
-                                    </div>
-                                    <div class="input">
-                                        <input id="cena_otkritiya" class="input__input" type="text" name="cena_otkritiya" value="44500">
-                                    </div>
-                                </div>
-
-                                <div class="calc__val-block">
-                                    <div class="form-field">
-                                        <div class="form-field__title-block">
-                                            <label class="form-field__title" for="cena_likvidacii_niz">Цена ликвидации, низ</label>
-                                        </div>
-                                        <div class="calc__val-container">
-                                            <div class="input">
-                                                <div class="calc__val">
-                                                    Long: <span id="cena_likvidacii_niz_long" class="color-green">37 473,33</span>
-                                                </div>
+                            
+                                    <div class="calc__row">
+                                        <div class="calc__input form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="start_depo">Стартовый депо</label>
                                             </div>
                                             <div class="input">
-                                                <div class="calc__val">
-                                                    Short: <span id="cena_likvidacii_niz_short" class="color-green">50 526,67</span>
+                                                <input id="start_depo" class="input__input" type="text" name="start_depo" value="150">
+                                            </div>
+                                        </div>
+                            
+                                        <div class="calc__val-block">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="rab_diapazon">Рабочий диапазон</label>
+                                                </div>
+                                                <div class="input">
+                                                    <div class="calc__val">
+                                                        <span id="rab_diapazon" class="color-green">4 000</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="calc__row">
-                                <div class="calc__input form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="plecho">Плечо</label>
-                                    </div>
-                                    <div class="input">
-                                        <input id="plecho" class="input__input" type="text" name="plecho" value="10">
-                                    </div>
-                                </div>
-
-                                <div class="calc__val-block">
-                                    <div class="form-field">
-                                        <div class="form-field__title-block">
-                                            <label class="form-field__title" for="cena_likvidacii_otkritiya">Цена ликвидации открытия</label>
-                                        </div>
-                                        <div class="calc__val-container">
-                                            <div class="input">
-                                                <div class="calc__val">
-                                                    Long: <span id="cena_likvidacii_otkritiya_long" class="color-green">37 899,17</span>
-                                                </div>
+                            
+                                    <div class="calc__row">
+                                        <div class="calc__input form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="verh">Верхняя граница</label>
                                             </div>
                                             <div class="input">
-                                                <div class="calc__val">
-                                                    Short: <span id="cena_likvidacii_otkritiya_short" class="color-green">51 100,83</span>
+                                                <input id="verh" class="input__input" type="text" name="verh" value="48000">
+                                            </div>
+                                        </div>
+                            
+                                        <div class="calc__val-block">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="shag_setki">Шаг сетки, USDT</label>
+                                                </div>
+                                                <div class="input">
+                                                    <div class="calc__val">
+                                                        <span id="shag_setki" class="color-green">160</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="calc__row">
-                                <div class="calc__input form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="kolvo_setok">Количество сеток</label>
+                            
+                                    <div class="calc__row">
+                                        <div class="calc__input form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="niz">Нижняя граница</label>
+                                            </div>
+                                            <div class="input">
+                                                <input id="niz" class="input__input" type="text" name="niz" value="44000">
+                                            </div>
+                                        </div>
+                            
+                                        <div class="calc__val-block">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="cena_likvidacii_verh">Цена ликвидации, верх</label>
+                                                </div>
+                                                <div class="calc__val-container">
+                                                    <div class="input">
+                                                        <div class="calc__val">
+                                                            Long: <span id="cena_likvidacii_verh_long" class="color-green">40 880,00</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input">
+                                                        <div class="calc__val">
+                                                            Short: <span id="cena_likvidacii_verh_short" class="color-green">55 120,00</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="input">
-                                        <input id="kolvo_setok" class="input__input" type="text" name="kolvo_setok" value="25">
+                            
+                                    <div class="calc__row">
+                                        <div class="calc__input form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="cena_otkritiya">Цена открытия</label>
+                                            </div>
+                                            <div class="input">
+                                                <input id="cena_otkritiya" class="input__input" type="text" name="cena_otkritiya" value="44500">
+                                            </div>
+                                        </div>
+                            
+                                        <div class="calc__val-block">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="cena_likvidacii_niz">Цена ликвидации, низ</label>
+                                                </div>
+                                                <div class="calc__val-container">
+                                                    <div class="input">
+                                                        <div class="calc__val">
+                                                            Long: <span id="cena_likvidacii_niz_long" class="color-green">37 473,33</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input">
+                                                        <div class="calc__val">
+                                                            Short: <span id="cena_likvidacii_niz_short" class="color-green">50 526,67</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="calc__row">
+                                        <div class="calc__input form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="plecho">Плечо</label>
+                                            </div>
+                                            <div class="input">
+                                                <input id="plecho" class="input__input" type="text" name="plecho" value="10">
+                                            </div>
+                                        </div>
+                            
+                                        <div class="calc__val-block">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="cena_likvidacii_otkritiya">Цена ликвидации открытия</label>
+                                                </div>
+                                                <div class="calc__val-container">
+                                                    <div class="input">
+                                                        <div class="calc__val">
+                                                            Long: <span id="cena_likvidacii_otkritiya_long" class="color-green">37 899,17</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input">
+                                                        <div class="calc__val">
+                                                            Short: <span id="cena_likvidacii_otkritiya_short" class="color-green">51 100,83</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="calc__row">
+                                        <div class="calc__input form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="kolvo_setok">Количество сеток</label>
+                                            </div>
+                                            <div class="input">
+                                                <input id="kolvo_setok" class="input__input" type="text" name="kolvo_setok" value="25">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="calc box">
+                                    <div class="box__title-block">
+                                        <p class="box__title">Расчет по проценту просадки</p>
+                                    </div>
+                            
+                                    <div class="calc__row">
+                                        <div class="calc__input form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="percent_prosadki">Процент просадки</label>
+                                            </div>
+                                            <div class="input">
+                                                <input id="percent_prosadki" class="input__input" type="text" name="percent_prosadki" value="14,83%">
+                                            </div>
+                                        </div>
+                            
+                                        <div class="calc__val-block">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="dop_depo">Доп. депо</label>
+                                                </div>
+                                                <div class="input">
+                                                    <div class="calc__val">
+                                                        <span id="dop_depo" class="color-green">72,5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="calc__row">
+                                        <div class="calc__input form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="start_depo">Стартовый депо</label>
+                                            </div>
+                                            <div class="input">
+                                                <input id="start_depo" class="input__input" type="text" name="start_depo" value="150">
+                                            </div>
+                                        </div>
+                            
+                                        <div class="calc__val-block">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="rab_diapazon">Рабочий диапазон</label>
+                                                </div>
+                                                <div class="input">
+                                                    <div class="calc__val">
+                                                        <span id="rab_diapazon" class="color-green">4 000</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="calc__row">
+                                        <div class="calc__input form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="verh">Верхняя граница</label>
+                                            </div>
+                                            <div class="input">
+                                                <input id="verh" class="input__input" type="text" name="verh" value="48000">
+                                            </div>
+                                        </div>
+                            
+                                        <div class="calc__val-block">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="shag_setki">Шаг сетки, USDT</label>
+                                                </div>
+                                                <div class="input">
+                                                    <div class="calc__val">
+                                                        <span id="shag_setki" class="color-green">160</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="calc__row">
+                                        <div class="calc__input form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="niz">Нижняя граница</label>
+                                            </div>
+                                            <div class="input">
+                                                <input id="niz" class="input__input" type="text" name="niz" value="44000">
+                                            </div>
+                                        </div>
+                            
+                                        <div class="calc__val-block">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="cena_likvidacii_verh">Цена ликвидации, верх</label>
+                                                </div>
+                                                <div class="calc__val-container">
+                                                    <div class="input">
+                                                        <div class="calc__val">
+                                                            Long: <span id="cena_likvidacii_verh_long" class="color-green">40 880,00</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input">
+                                                        <div class="calc__val">
+                                                            Short: <span id="cena_likvidacii_verh_short" class="color-green">55 120,00</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="calc__row">
+                                        <div class="calc__input form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="cena_otkritiya">Цена открытия</label>
+                                            </div>
+                                            <div class="input">
+                                                <input id="cena_otkritiya" class="input__input" type="text" name="cena_otkritiya" value="44500">
+                                            </div>
+                                        </div>
+                            
+                                        <div class="calc__val-block">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="cena_likvidacii_niz">Цена ликвидации, низ</label>
+                                                </div>
+                                                <div class="calc__val-container">
+                                                    <div class="input">
+                                                        <div class="calc__val">
+                                                            Long: <span id="cena_likvidacii_niz_long" class="color-green">37 473,33</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input">
+                                                        <div class="calc__val">
+                                                            Short: <span id="cena_likvidacii_niz_short" class="color-green">50 526,67</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="calc__row">
+                                        <div class="calc__input form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="plecho">Плечо</label>
+                                            </div>
+                                            <div class="input">
+                                                <input id="plecho" class="input__input" type="text" name="plecho" value="10">
+                                            </div>
+                                        </div>
+                            
+                                        <div class="calc__val-block">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="cena_likvidacii_otkritiya">Цена ликвидации открытия</label>
+                                                </div>
+                                                <div class="calc__val-container">
+                                                    <div class="input">
+                                                        <div class="calc__val">
+                                                            Long: <span id="cena_likvidacii_otkritiya_long" class="color-green">37 899,17</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input">
+                                                        <div class="calc__val">
+                                                            Short: <span id="cena_likvidacii_otkritiya_short" class="color-green">51 100,83</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="calc__row">
+                                        <div class="calc__input form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="kolvo_setok">Количество сеток</label>
+                                            </div>
+                                            <div class="input">
+                                                <input id="kolvo_setok" class="input__input" type="text" name="kolvo_setok" value="25">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="calc box">
-                            <div class="box__title-block">
-                                <p class="box__title">Расчет по проценту просадки</p>
-                            </div>
-
-                            <div class="calc__row">
-                                <div class="calc__input form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="percent_prosadki">Процент просадки</label>
-                                    </div>
-                                    <div class="input">
-                                        <input id="percent_prosadki" class="input__input" type="text" name="percent_prosadki" value="14,83%">
-                                    </div>
-                                </div>
-
-                                <div class="calc__val-block">
-                                    <div class="form-field">
-                                        <div class="form-field__title-block">
-                                            <label class="form-field__title" for="dop_depo">Доп. депо</label>
+                        <div class="tab" data-target="2">
+                            <div class="m-calc">
+                                <div class="m-calc__left">
+                                    <div class="box">
+                                        <div class="box__title-block">
+                                            <p class="box__title">Вводные</p>
                                         </div>
-                                        <div class="input">
-                                            <div class="calc__val">
-                                                <span id="dop_depo" class="color-green">72,5</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="calc__row">
-                                <div class="calc__input form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="start_depo">Стартовый депо</label>
-                                    </div>
-                                    <div class="input">
-                                        <input id="start_depo" class="input__input" type="text" name="start_depo" value="150">
-                                    </div>
-                                </div>
-
-                                <div class="calc__val-block">
-                                    <div class="form-field">
-                                        <div class="form-field__title-block">
-                                            <label class="form-field__title" for="rab_diapazon">Рабочий диапазон</label>
-                                        </div>
-                                        <div class="input">
-                                            <div class="calc__val">
-                                                <span id="rab_diapazon" class="color-green">4 000</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="calc__row">
-                                <div class="calc__input form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="verh">Верхняя граница</label>
-                                    </div>
-                                    <div class="input">
-                                        <input id="verh" class="input__input" type="text" name="verh" value="48000">
-                                    </div>
-                                </div>
-
-                                <div class="calc__val-block">
-                                    <div class="form-field">
-                                        <div class="form-field__title-block">
-                                            <label class="form-field__title" for="shag_setki">Шаг сетки, USDT</label>
-                                        </div>
-                                        <div class="input">
-                                            <div class="calc__val">
-                                                <span id="shag_setki" class="color-green">160</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="calc__row">
-                                <div class="calc__input form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="niz">Нижняя граница</label>
-                                    </div>
-                                    <div class="input">
-                                        <input id="niz" class="input__input" type="text" name="niz" value="44000">
-                                    </div>
-                                </div>
-
-                                <div class="calc__val-block">
-                                    <div class="form-field">
-                                        <div class="form-field__title-block">
-                                            <label class="form-field__title" for="cena_likvidacii_verh">Цена ликвидации, верх</label>
-                                        </div>
-                                        <div class="calc__val-container">
-                                            <div class="input">
-                                                <div class="calc__val">
-                                                    Long: <span id="cena_likvidacii_verh_long" class="color-green">40 880,00</span>
+                            
+                                        <div class="m-calc__row">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="shag_setki">Шаг сетки (%)</label>
+                                                </div>
+                                                <div class="input">
+                                                    <input id="shag_setki" class="input__input" type="text" name="shag_setki" value="1">
                                                 </div>
                                             </div>
-                                            <div class="input">
-                                                <div class="calc__val">
-                                                    Short: <span id="cena_likvidacii_verh_short" class="color-green">55 120,00</span>
+                            
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="depo_bota">Депо бота</label>
+                                                </div>
+                                                <div class="input">
+                                                    <input id="depo_bota" class="input__input" type="text" name="depo_bota" value="1000">
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="calc__row">
-                                <div class="calc__input form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="cena_otkritiya">Цена открытия</label>
-                                    </div>
-                                    <div class="input">
-                                        <input id="cena_otkritiya" class="input__input" type="text" name="cena_otkritiya" value="44500">
-                                    </div>
-                                </div>
-
-                                <div class="calc__val-block">
-                                    <div class="form-field">
-                                        <div class="form-field__title-block">
-                                            <label class="form-field__title" for="cena_likvidacii_niz">Цена ликвидации, низ</label>
-                                        </div>
-                                        <div class="calc__val-container">
-                                            <div class="input">
-                                                <div class="calc__val">
-                                                    Long: <span id="cena_likvidacii_niz_long" class="color-green">37 473,33</span>
+                            
+                                        <div class="m-calc__row">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="cena_vhoda">Цена входа</label>
+                                                </div>
+                                                <div class="input">
+                                                    <input id="cena_vhoda" class="input__input" type="text" name="cena_vhoda" value="45000">
                                                 </div>
                                             </div>
-                                            <div class="input">
-                                                <div class="calc__val">
-                                                    Short: <span id="cena_likvidacii_niz_short" class="color-green">50 526,67</span>
+                            
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="pribil_ot_depo">Прибыль (% от депо)</label>
+                                                </div>
+                                                <div class="input">
+                                                    <input id="pribil_ot_depo" class="input__input" type="text" name="pribil_ot_depo" value="2">
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="calc__row">
-                                <div class="calc__input form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="plecho">Плечо</label>
-                                    </div>
-                                    <div class="input">
-                                        <input id="plecho" class="input__input" type="text" name="plecho" value="10">
-                                    </div>
-                                </div>
-
-                                <div class="calc__val-block">
-                                    <div class="form-field">
-                                        <div class="form-field__title-block">
-                                            <label class="form-field__title" for="cena_likvidacii_otkritiya">Цена ликвидации открытия</label>
-                                        </div>
-                                        <div class="calc__val-container">
-                                            <div class="input">
-                                                <div class="calc__val">
-                                                    Long: <span id="cena_likvidacii_otkritiya_long" class="color-green">37 899,17</span>
+                            
+                                        <div class="m-calc__row">
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="kolvo_orderov">Кол-во ордеров</label>
+                                                </div>
+                                                <div class="input">
+                                                    <input id="kolvo_orderov" class="input__input" type="text" name="kolvo_orderov" value="5">
                                                 </div>
                                             </div>
-                                            <div class="input">
-                                                <div class="calc__val">
-                                                    Short: <span id="cena_likvidacii_otkritiya_short" class="color-green">51 100,83</span>
+                            
+                                            <div class="form-field">
+                                                <div class="form-field__title-block">
+                                                    <label class="form-field__title" for="plecho">Плечо</label>
                                                 </div>
+                                                <div class="input">
+                                                    <input id="plecho" class="input__input" type="text" name="plecho" value="10">
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <div class="form-field">
+                                            <div class="form-field__title-block">
+                                                <label class="form-field__title" for="martingale">Мартингейл (1-2)</label>
+                                            </div>
+                                            <div class="input">
+                                                <input id="martingale" class="input__input" type="text" name="martingale" value="1">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="calc__row">
-                                <div class="calc__input form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="kolvo_setok">Количество сеток</label>
+                            
+                                <div class="m-calc__right">
+                                    <div class="box">
+                                        <div class="box__title-block">
+                                            <p class="box__title">Лонг</p>
+                                        </div>
+                            
+                                        <div class="overflow-table">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>№</th>
+                                                        <th>Цена</th>
+                                                        <th>Сумма закупки</th>
+                                                        <th>Цена закрытия</th>
+                                                        <th>Цена ликвидации</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>45 000</td>
+                                                        <td>32.2581</td>
+                                                        <td>47809.0676</td>
+                                                        <td>40500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>45 000</td>
+                                                        <td>32.2581</td>
+                                                        <td>47809.0676</td>
+                                                        <td>40500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>45 000</td>
+                                                        <td>32.2581</td>
+                                                        <td>47809.0676</td>
+                                                        <td>40500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>45 000</td>
+                                                        <td>32.2581</td>
+                                                        <td>47809.0676</td>
+                                                        <td>40500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>45 000</td>
+                                                        <td>32.2581</td>
+                                                        <td>47809.0676</td>
+                                                        <td>40500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>45 000</td>
+                                                        <td>32.2581</td>
+                                                        <td>47809.0676</td>
+                                                        <td>40500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>45 000</td>
+                                                        <td>32.2581</td>
+                                                        <td>47809.0676</td>
+                                                        <td>40500</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
-                                    <div class="input">
-                                        <input id="kolvo_setok" class="input__input" type="text" name="kolvo_setok" value="25">
+                            
+                                    <div class="box">
+                                        <div class="box__title-block">
+                                            <p class="box__title">Шорт</p>
+                                        </div>
+                            
+                                        <div class="overflow-table">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>№</th>
+                                                        <th>Цена</th>
+                                                        <th>Сумма закупки</th>
+                                                        <th>Цена закрытия</th>
+                                                        <th>Цена ликвидации</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>45 000</td>
+                                                        <td>32.2581</td>
+                                                        <td>47809.0676</td>
+                                                        <td>40500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>45 000</td>
+                                                        <td>32.2581</td>
+                                                        <td>47809.0676</td>
+                                                        <td>40500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>45 000</td>
+                                                        <td>32.2581</td>
+                                                        <td>47809.0676</td>
+                                                        <td>40500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>45 000</td>
+                                                        <td>32.2581</td>
+                                                        <td>47809.0676</td>
+                                                        <td>40500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>45 000</td>
+                                                        <td>32.2581</td>
+                                                        <td>47809.0676</td>
+                                                        <td>40500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>45 000</td>
+                                                        <td>32.2581</td>
+                                                        <td>47809.0676</td>
+                                                        <td>40500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>45 000</td>
+                                                        <td>32.2581</td>
+                                                        <td>47809.0676</td>
+                                                        <td>40500</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -536,6 +775,25 @@
             </div>
     
             <div class="footer__contacts">
+                <div class="footer__socials">
+                    <a class="footer-social" href="#" title="Наш Telegram" target="_blank" rel="nofollow noreferrer">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#tg" />
+                        </svg>
+                    </a>
+    
+                    <a class="footer-social" href="#" title="Мы Вконтакте" target="_blank" rel="nofollow noreferrer">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#vk" />
+                        </svg>
+                    </a>
+    
+                    <a class="footer-social" href="#" title="Мы на YouTube" target="_blank" rel="nofollow noreferrer">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#yt" />
+                        </svg>
+                    </a>
+                </div>
                 Техподдержка:<br>
                 <a href="mailto:texpomosh@one-shopw.com">texpomosh@one-shopw.com</a>
             </div>

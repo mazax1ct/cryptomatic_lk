@@ -108,4 +108,31 @@
             margin-bottom: 40px;
         }
     }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        @media(min-width: $sm) {
+            flex-direction: row;
+        }
+    }
+
+    &__row-block {
+        &:first-child {
+            flex-grow: 1;
+        }
+
+        &:nth-child(2) {
+            @media(max-width: $sm - 0.01px) {
+                flex-grow: 1;
+            }
+
+            .button {
+                @media(max-width: $sm - 0.01px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }

@@ -53,3 +53,11 @@
         z-index: 1;
     }
 }
+
+.tab {
+    display: none;
+
+    &.is-active {
+        display: block;
+    }
+}

@@ -123,3 +123,13 @@ $(document).on('click', '.accordion__toggler', function () {
   $(this).closest('.accordion').find('.accordion__body').slideToggle();
   return false;
 });
+
+//табы
+$(document).on('click', '.tabs-menu__link', function () {
+  $(this).closest('.tabs').find('.tabs-menu__link.is-active').removeClass('is-active');
+  $(this).addClass('is-active');
+
+  $(this).closest('.tabs').find('.tab.is-active').removeClass('is-active');
+  $(this).closest('.tabs').find('.tab[data-target="'+ $(this).attr('data-target') +'"]').addClass('is-active');
+  return false;
+});

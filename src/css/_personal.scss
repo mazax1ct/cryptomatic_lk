@@ -120,6 +120,7 @@
     &__login {
         color: var(--light);
         font-size: 16px;
+        font-weight: 400;
         line-height: 1.5;
         margin: 0;
         overflow: hidden;
@@ -227,7 +228,7 @@
         align-items: center;
         display: flex;
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 400;
         min-height: 48px;
         @media(min-width: $hd) {
             padding-left: 12px;
@@ -260,7 +261,6 @@
         border-left: 4px solid transparent;
         display: flex;
         gap: 12px;
-        font-weight: 300;
         min-height: 52px;
         padding-left: 24px;
         @media(min-width: $hd) {
