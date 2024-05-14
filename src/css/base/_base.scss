@@ -360,6 +360,7 @@ hr {
 }
 
 .overflow-table {
+    @include scrollbar;
     height: 312px;
     overflow-y: auto;
 

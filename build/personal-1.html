@@ -1797,6 +1797,90 @@
             </div>
         </form>
     </div>
+    
+    <div id="test" class="box box--780" style="display: none">
+        <div class="box__title-block">
+            <p class="box__title">Анкета №1</p>
+            <button class="js-popup-closer box__closer" type="button" title="Закрыть">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close" />
+                </svg>
+            </button>
+        </div>
+    
+        <form class="form" action="">
+            <div>
+                <div class="test-question">
+                    <p><b>Вопрос 1. Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации?</b></p>
+    
+                    <div class="form-field">
+                        <label class="input">
+                            <input class="input__input" type="text" name="q_1" value="" placeholder="Введите ответ">
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="test-question">
+                    <p><b>Вопрос 2. Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так?</b></p>
+    
+                    <div class="checkbox-group">
+                        <label class="checkbox">
+                            <input type="checkbox" name="check_1">
+                            <span class="checkbox__icon"></span>
+                            <span class="checkbox__text">Вариант ответа 1</span>
+                        </label>
+    
+                        <label class="checkbox">
+                            <input type="checkbox" name="check_2">
+                            <span class="checkbox__icon"></span>
+                            <span class="checkbox__text">Вариант ответа 2</span>
+                        </label>
+    
+                        <label class="checkbox">
+                            <input type="checkbox" name="check_3">
+                            <span class="checkbox__icon"></span>
+                            <span class="checkbox__text">Вариант ответа 3</span>
+                        </label>
+    
+                        <label class="checkbox">
+                            <input type="checkbox" name="check_4">
+                            <span class="checkbox__icon"></span>
+                            <span class="checkbox__text">Вариант ответа 4</span>
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="test-question">
+                    <p><b>Вопрос 3. В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги "de Finibus Bonorum et Malorum" ("О пределах добра и зла")?</b></p>
+    
+                    <div class="radio-group">
+                        <label class="radio">
+                            <input type="radio" name="reinvest" value="y">
+                            <span class="radio__icon"></span>
+                            <span class="radio__text">Да</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="reinvest" value="n">
+                            <span class="radio__icon"></span>
+                            <span class="radio__text">Нет</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="reinvest" value="maybe">
+                            <span class="radio__icon"></span>
+                            <span class="radio__text">Возможно</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form__bottom-block form__bottom-block--sticky">
+                <div class="form__buttons">
+                    <button class="js-popup-closer button button--green button--bordered button--h_48" type="button"><span>Отмена</span></button>
+                    <button class="button button--green button--h_48" data-fancybox data-src="#api_key_added" type="button"><span>Сохранить</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 
 <script src="js/jquery-3.6.0.min.js"></script>
