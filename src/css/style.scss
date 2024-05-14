@@ -26,7 +26,7 @@
 @import "base/_select2-custom.scss";
 @import "plugins/air-datepicker.css";
 @import "base/_air-datepicker-custom.scss";
-@import "plugins/jquery.fancybox.scss";
+@import "plugins/jquery.fancybox.scss"; //@import "base/_loader.scss";
 @import "_personal.scss";
 @import "_calcs.scss";
 @import "_m-calc.scss";
