@@ -1074,3 +1074,63 @@
         </div>
     </form>
 </div>
+
+<div id="pay" class="box box--480" style="display: none">
+    <div class="box__title-block">
+        <p class="box__title">Оплата подписки</p>
+        <button class="js-popup-closer box__closer" type="button" title="Закрыть">
+            <svg aria-hidden="true">
+                <use xlink:href="images/sprite.svg#close" />
+            </svg>
+        </button>
+    </div>
+
+    <form class="form" action="">
+        <div class="form-field">
+            <div class="form-field__title-block">
+                <label class="form-field__title" for="chain">Сеть</label>
+            </div>
+            <div class="input">
+                <input id="chain" class="input__input" type="text" name="chain" value="" placeholder="TRC20">
+            </div>
+        </div>
+
+        <div class="form-field">
+            <div class="form-field__title-block">
+                <label class="form-field__title" for="wallet">Кошелек</label>
+            </div>
+            <div class="input">
+                <input id="wallet" class="input__input" type="text" name="wallet" value="TUzsVy3AHagwsewLV9b6U3xiLtGrE2PxHx" placeholder="Кошелек">
+                <button class="js-copy-text input__button" type="button" type="button" title="Копировать">
+                    <svg class="green" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#copy" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <ul>
+            <li>Внесите на указанный кошелек оплату за подписку в размере <span class="color-green">35 USDT</span></li>
+            <li>После оплаты введите TxID, нажмите <span class="color-green">«Оплачено»</span></li>
+            <li>Ожидайте проверки платежа</li>
+            <li>В течение 24 часов подписка будет активирована </li>
+        </ul>
+
+        <div class="form-field">
+            <div class="form-field__title-block">
+                <label class="form-field__title" for="trans">TxID*</label>
+            </div>
+            <div class="input">
+                <input id="trans" class="input__input" type="text" name="trans" value="" placeholder="TxID">
+            </div>
+        </div>
+
+        <div class="form__bottom-block form__bottom-block--sticky">
+            <div></div>
+            <div class="form__buttons">
+                <button class="js-popup-closer button button--green button--bordered button--h_48" type="button"><span>Закрыть</span></button>
+                <button class="button button--green button--h_48" type="button"><span>Оплачено</span></button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -4,23 +4,33 @@ $.fancybox.defaults.smallBtn = false;
 $.fancybox.defaults.toolbar = false;
 $.fancybox.defaults.touch = false;
 
-//открытие главного меню на мобильных
-$(document).on('click', '.js-menu-opener', function () {
-  $('body').addClass('overflow');
-  $('.main-menu').addClass('is-open');
+function menuClose() {
+  $('.js-menu-toggler').removeClass('is-active');
+  $('.js-menu-toggler').find('use').attr('xlink:href', 'images/sprite.svg#menu');
+  $('.personal-menu').removeClass('is-open');
   setTimeout(function() {
-    $('.main-menu__inner').addClass('is-open');
-  }, 100);
-  return false;
-});
-
-//закрытие главного меню на мобильных
-$(document).on('click', '.js-menu-closer', function () {
-  $('.main-menu__inner').removeClass('is-open');
-  setTimeout(function() {
+    $('.personal-menu').slideUp();
     $('body').removeClass('overflow');
-    $('.main-menu').removeClass('is-open');
-  }, 400);
+    $('.personal__left').removeClass('is-open');
+  }, 300);
+}
+
+//тогглер главного меню на мобильных
+$(document).on('click', '.js-menu-toggler', function () {
+  let _this = $(this);
+  if(!_this.hasClass('is-active')) {
+    _this.addClass('is-active');
+    _this.find('use').attr('xlink:href', 'images/sprite.svg#close');
+    $('body').addClass('overflow');
+    $('.personal__left').addClass('is-open');
+    $('.personal-menu').css('display', 'flex');
+    setTimeout(function() {
+      $('.personal-menu').addClass('is-open');
+    }, 300);
+  } else {
+    menuClose();
+  }
+
   return false;
 });
 
@@ -132,4 +142,11 @@ $(document).on('click', '.tabs-menu__link', function () {
   $(this).closest('.tabs').find('.tab.is-active').removeClass('is-active');
   $(this).closest('.tabs').find('.tab[data-target="'+ $(this).attr('data-target') +'"]').addClass('is-active');
   return false;
+});
+
+//копирование текста
+$(document).on("click", ".js-copy-text", function() {
+  let _this = $(this);
+  let text = _this.closest('.input').find('input').val();
+  navigator.clipboard.writeText(text);
 });

@@ -423,3 +423,17 @@ hr {
         }
     }
 }
+
+ol,
+ul {
+    list-style-position: inside;
+    padding: 0;
+
+    &:not([class]) {
+        li {
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}

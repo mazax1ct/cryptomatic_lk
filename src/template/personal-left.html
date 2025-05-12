@@ -1,17 +1,17 @@
-<div class="personal__header">
-    <a class="personal__header-logo" href="#">
-        <img src="images/logo.svg" alt="">
-    </a>
+<div class="personal__left-inner">
+    <div class="personal__header">
+        <a class="personal__header-logo" href="#">
+            <img src="images/logo.svg" alt="">
+        </a>
 
-    <button class="js-personal-menu-opener personal__burger" type="button" title="Меню">
-        <svg aria-hidden="true">
-            <use xlink:href="images/sprite.svg#menu" />
-        </svg>
-    </button>
-</div>
+        <button class="js-menu-toggler personal__burger" type="button" title="Меню">
+            <svg aria-hidden="true">
+                <use xlink:href="images/sprite.svg#menu" />
+            </svg>
+        </button>
+    </div>
 
-<div class="personal-menu">
-    <div class="personal-menu__inner">
+    <div class="personal-menu">
         <div class="user-info">
             <svg class="user-info__avatar" aria-hidden="true">
                 <use xlink:href="images/sprite.svg#user" />
@@ -40,28 +40,36 @@
                 <li class="personal-menu__item">
                     <a class="personal-menu__link" href="#">
                         <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#bot" />
+                        </svg>
+                        <span>Торговый бот</span>
+                    </a>
+                </li>
+                <li class="personal-menu__item">
+                    <a class="personal-menu__link" href="#">
+                        <svg aria-hidden="true">
                             <use xlink:href="images/sprite.svg#learn" />
                         </svg>
                         <span>Обучающий курс</span>
                     </a>
                 </li>
                 <!--<li class="personal-menu__item">
-                    <a class="personal-menu__link" href="#">
-                        <svg aria-hidden="true">
-                            <use xlink:href="images/sprite.svg#wallet" />
-                        </svg>
-                        <span>Пополнить</span>
-                    </a>
-                </li>-->
+              <a class="personal-menu__link" href="#">
+                  <svg aria-hidden="true">
+                      <use xlink:href="images/sprite.svg#wallet" />
+                  </svg>
+                  <span>Пополнить</span>
+              </a>
+          </li>-->
                 <li class="personal-menu__item">
-                    <span class="personal-menu__link is-disabled">
+                    <a class="personal-menu__link" href="#">
                         <svg aria-hidden="true">
                             <use xlink:href="images/sprite.svg#wrench" />
                         </svg>
                         <span>Инструменты</span>
-                    </span>
+                    </a>
                 </li>
-                <li class="personal-menu__item">
+                <!--<li class="personal-menu__item">
                     <a class="personal-menu__link" href="#">
                         <svg aria-hidden="true">
                             <use xlink:href="images/sprite.svg#chat" />
@@ -69,7 +77,7 @@
                         <span>Чаты</span>
                         <span class="count-badge">1</span>
                     </a>
-                </li>
+                </li>-->
                 <li class="personal-menu__item">
                     <a class="personal-menu__link" href="#">
                         <svg aria-hidden="true">
@@ -84,7 +92,7 @@
         <div class="personal-menu__title">Функционал в разработке</div>
 
         <ul class="personal-menu__list">
-            <li class="personal-menu__item">
+            <!--<li class="personal-menu__item">
                 <span class="personal-menu__link is-disabled">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#lock" />
@@ -99,7 +107,7 @@
                     </svg>
                     <span>Торговый индикатор</span>
                 </span>
-            </li>
+            </li>-->
             <li class="personal-menu__item">
                 <span class="personal-menu__link is-disabled">
                     <svg aria-hidden="true">
@@ -110,10 +118,4 @@
             </li>
         </ul>
     </div>
-
-    <button class="js-personal-menu-closer personal-menu__closer" type="button" title="Закрыть меню">
-        <svg aria-hidden="true">
-            <use xlink:href="images/sprite.svg#close" />
-        </svg>
-    </button>
 </div>

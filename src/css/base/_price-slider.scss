@@ -1,0 +1,39 @@
+.price-slider {
+    &__title {
+        line-height: 1.25;
+        display: block;
+        margin-bottom: 6px;
+        color: var(--grey);
+    }
+
+    &__inner {
+        border-radius: 12px;
+        background-color: var(--black);
+        padding: 20px 24px;
+    }
+
+    &__info {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        & > div {
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+
+    &__val {
+        color: var(--primary);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.25;
+        margin-bottom: 0;
+    }
+
+    &__val-title {
+        font-size: 12px;
+        line-height: 1;
+    }
+}

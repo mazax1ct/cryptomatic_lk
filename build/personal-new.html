@@ -156,23 +156,7 @@
             </div>
 
             <div class="personal__right">
-                <div class="box box--inline box--warning">
-                    <div class="box__title-block box__title-block--mb_0">
-                        <div class="box__title-controls">
-                            <div class="timer">
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#timer"></use>
-                                </svg>
-                                21:33:28
-                            </div>
-                        </div>
-                        <p class="box__title box__title--fs_16">Ограниченное предложение!</p>
-                    </div>
 
-                    <p class="box__text">Начните занятия в течение 3 дней после регистрации и получите скидку в 10%!</p>
-
-                    <a class="button button--white button--bordered button--h_48 button--wide" href="#">Оплатить курс!</a>
-                </div>
                 <div class="columns">
                     <div>
                         <div class="box">
@@ -199,30 +183,17 @@
 
                                 <div class="form-field">
                                     <div class="form-field__title-block">
-                                        <label class="form-field__title" for="email">E-mail</label>
+                                        <label class="form-field__title" for="new_pass">Пароль</label>
                                     </div>
-
                                     <div class="form-field__row">
                                         <div class="form-field__row-block">
                                             <div class="input">
-                                                <input id="email" class="js-email-mask input__input" type="text" name="email" value="moneymaker@yandex.ru" placeholder="E-mail">
-                                            </div>
-                                        </div>
-                                        <div class="form-field__row-block">
-                                            <button class="button button--green button--h_48" type="button" disabled><span>Сохранить</span></button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="phone">Телефон</label>
-                                    </div>
-
-                                    <div class="form-field__row">
-                                        <div class="form-field__row-block">
-                                            <div class="input">
-                                                <input id="phone" class="js-phone-mask input__input" type="text" name="phone" value="" placeholder="+7(___) ___ __ __">
+                                                <input id="new_pass" class="input__input" type="password" name="new_pass" value="" placeholder="Пароль" autocomplete="off">
+                                                <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#show_pass" />
+                                                    </svg>
+                                                </button>
                                             </div>
                                         </div>
                                         <div class="form-field__row-block">
@@ -239,9 +210,8 @@
                                     <div class="form-field__row">
                                         <div class="form-field__row-block">
                                             <div class="input">
-                                                <input id="telegram" class="input__input error" type="text" name="telegram" value="" placeholder="@username">
+                                                <input id="telegram" class="input__input" type="text" name="telegram" value="" placeholder="@username">
                                             </div>
-                                            <div class="input-error">Ошибка</div>
                                         </div>
                                         <div class="form-field__row-block">
                                             <button class="button button--green button--h_48" type="button" disabled><span>Сохранить</span></button>
@@ -251,17 +221,13 @@
 
                                 <div class="form-field">
                                     <div class="form-field__title-block">
-                                        <label class="form-field__title" for="new_pass">Новый пароль</label>
+                                        <label class="form-field__title" for="uid">UID</label>
                                     </div>
+
                                     <div class="form-field__row">
                                         <div class="form-field__row-block">
                                             <div class="input">
-                                                <input id="new_pass" class="input__input" type="password" name="new_pass" value="" placeholder="Новый пароль" autocomplete="off">
-                                                <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
-                                                    <svg aria-hidden="true">
-                                                        <use xlink:href="images/sprite.svg#show_pass" />
-                                                    </svg>
-                                                </button>
+                                                <input id="uid" class="input__input" type="text" name="uid" value="" placeholder="UID">
                                             </div>
                                         </div>
                                         <div class="form-field__row-block">
@@ -270,49 +236,102 @@
                                     </div>
                                 </div>
                             </form>
+
+                            <div class="box__buttons">
+                                <button class="button button--transparent button--h_48" type="button">Связаться с менеджером</button>
+                            </div>
                         </div>
                     </div>
                     <div>
                         <div class="box">
                             <div class="box__title-block">
-                                <p class="box__title">Доступ к инструментам</p>
+                                <p class="box__title">Состояние подписки</p>
                             </div>
 
-                            <p class="form-field color-red">Чтобы воспользоваться инструментами, Вам нужно указать свои UID с биржи BYBIT</p>
+                            <div class="timer-block">
+                                <p class="color-red">Ошибка</p>
 
-                            <form class="form" action="">
-                                <div class="form-field">
-                                    <div class="form-field__title-block">
-                                        <label class="form-field__title" for="uid">UID</label>
-                                    </div>
-                                    <div class="input">
-                                        <input id="uid" class="input__input" type="text" name="uid" value="" placeholder="Введите номер">
-                                    </div>
+                                <div class="timer is-disabled">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#timer"></use>
+                                    </svg>
+                                    00:00:00
                                 </div>
+                            </div>
 
-                                <div class="form__bottom-block">
-                                    <div class="form__buttons">
-                                        <button class="button button--green button--h_48" type="button" disabled><span>Сохранить</span></button>
-                                    </div>
-                                </div>
-                            </form>
+                            <p class="form-field color-red text-center">Нам не удалось обработать Вашу заявку, свяжитесь с менеджером или повторите попытку активации подписки</p>
+
+                            <div class="box__buttons">
+                                <button class="button button--green button--h_48" type="button">Продлить</button>
+                                <button class="button button--transparent button--h_48" type="button">Связаться с менеджером</button>
+                            </div>
                         </div>
 
                         <div class="box">
                             <div class="box__title-block">
-                                <p class="box__title">Обучающий курс</p>
+                                <p class="box__title">Состояние подписки</p>
                             </div>
 
-                            <table class="stripe-table">
-                                <tr>
-                                    <th>Курс</th>
-                                    <td class="text-right">Куплен</td>
-                                </tr>
-                                <tr>
-                                    <th>Прогресс</th>
-                                    <td class="text-right">4/25 <a href="#">Продолжить</a></td>
-                                </tr>
-                            </table>
+                            <div class="timer-block">
+                                <p class="color-green">Активна</p>
+
+                                <div class="timer">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#timer"></use>
+                                    </svg>
+                                    21:33:48
+                                </div>
+                            </div>
+
+                            <form class="form" action="">
+                                <div class="form-field">
+                                    <div class="form-field__title-block">
+                                        <label class="form-field__title" for="code">Ключ активации</label>
+                                    </div>
+
+                                    <div class="form-field__row">
+                                        <div class="form-field__row-block">
+                                            <div class="input">
+                                                <input id="code" class="input__input" type="text" name="code" value="sjH8L0vT6" placeholder="Ключ активации">
+                                                <button class="js-copy-text input__button" type="button" type="button" title="Копировать">
+                                                    <svg class="green" aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#copy" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="box__buttons">
+                                <button class="button button--green button--h_48" type="button">Подписаться</button>
+                                <button class="button button--transparent button--h_48" type="button">Связаться с менеджером</button>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="box__title-block">
+                                <p class="box__title">Состояние подписки</p>
+                            </div>
+
+                            <div class="timer-block">
+                                <p>Обработка</p>
+
+                                <div class="timer">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#timer"></use>
+                                    </svg>
+                                    21:33:48
+                                </div>
+                            </div>
+
+                            <p class="form-field text-center">Ваша заявка обрабатывается</p>
+
+                            <div class="box__buttons">
+                                <button class="button button--green button--h_48" type="button">Подписаться</button>
+                                <button class="button button--transparent button--h_48" type="button">Связаться с менеджером</button>
+                            </div>
                         </div>
                     </div>
                 </div>

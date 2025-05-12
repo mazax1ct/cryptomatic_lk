@@ -173,6 +173,15 @@
         background-color: transparent;
     }
 
+    &--transparent {
+        background-color: transparent;
+        color: var(--primary);
+        padding: 0 !important;
+        @include hover {
+            color: var(--primary-a);
+        }
+    }
+
     &--h_32 {
         border-radius: 8px;
         font-size: 14px;

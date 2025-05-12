@@ -32,20 +32,20 @@
     <main class="page-content">
         <div class="personal">
             <div class="personal__left">
-                <div class="personal__header">
-                    <a class="personal__header-logo" href="#">
-                        <img src="images/logo.svg" alt="">
-                    </a>
+                <div class="personal__left-inner">
+                    <div class="personal__header">
+                        <a class="personal__header-logo" href="#">
+                            <img src="images/logo.svg" alt="">
+                        </a>
                 
-                    <button class="js-personal-menu-opener personal__burger" type="button" title="Меню">
-                        <svg aria-hidden="true">
-                            <use xlink:href="images/sprite.svg#menu" />
-                        </svg>
-                    </button>
-                </div>
+                        <button class="js-menu-toggler personal__burger" type="button" title="Меню">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#menu" />
+                            </svg>
+                        </button>
+                    </div>
                 
-                <div class="personal-menu">
-                    <div class="personal-menu__inner">
+                    <div class="personal-menu">
                         <div class="user-info">
                             <svg class="user-info__avatar" aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#user" />
@@ -74,28 +74,36 @@
                                 <li class="personal-menu__item">
                                     <a class="personal-menu__link" href="#">
                                         <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#bot" />
+                                        </svg>
+                                        <span>Торговый бот</span>
+                                    </a>
+                                </li>
+                                <li class="personal-menu__item">
+                                    <a class="personal-menu__link" href="#">
+                                        <svg aria-hidden="true">
                                             <use xlink:href="images/sprite.svg#learn" />
                                         </svg>
                                         <span>Обучающий курс</span>
                                     </a>
                                 </li>
                                 <!--<li class="personal-menu__item">
-                                    <a class="personal-menu__link" href="#">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#wallet" />
-                                        </svg>
-                                        <span>Пополнить</span>
-                                    </a>
-                                </li>-->
+                              <a class="personal-menu__link" href="#">
+                                  <svg aria-hidden="true">
+                                      <use xlink:href="images/sprite.svg#wallet" />
+                                  </svg>
+                                  <span>Пополнить</span>
+                              </a>
+                          </li>-->
                                 <li class="personal-menu__item">
-                                    <span class="personal-menu__link is-disabled">
+                                    <a class="personal-menu__link" href="#">
                                         <svg aria-hidden="true">
                                             <use xlink:href="images/sprite.svg#wrench" />
                                         </svg>
                                         <span>Инструменты</span>
-                                    </span>
+                                    </a>
                                 </li>
-                                <li class="personal-menu__item">
+                                <!--<li class="personal-menu__item">
                                     <a class="personal-menu__link" href="#">
                                         <svg aria-hidden="true">
                                             <use xlink:href="images/sprite.svg#chat" />
@@ -103,7 +111,7 @@
                                         <span>Чаты</span>
                                         <span class="count-badge">1</span>
                                     </a>
-                                </li>
+                                </li>-->
                                 <li class="personal-menu__item">
                                     <a class="personal-menu__link" href="#">
                                         <svg aria-hidden="true">
@@ -118,7 +126,7 @@
                         <div class="personal-menu__title">Функционал в разработке</div>
                 
                         <ul class="personal-menu__list">
-                            <li class="personal-menu__item">
+                            <!--<li class="personal-menu__item">
                                 <span class="personal-menu__link is-disabled">
                                     <svg aria-hidden="true">
                                         <use xlink:href="images/sprite.svg#lock" />
@@ -133,7 +141,7 @@
                                     </svg>
                                     <span>Торговый индикатор</span>
                                 </span>
-                            </li>
+                            </li>-->
                             <li class="personal-menu__item">
                                 <span class="personal-menu__link is-disabled">
                                     <svg aria-hidden="true">
@@ -144,12 +152,6 @@
                             </li>
                         </ul>
                     </div>
-                
-                    <button class="js-personal-menu-closer personal-menu__closer" type="button" title="Закрыть меню">
-                        <svg aria-hidden="true">
-                            <use xlink:href="images/sprite.svg#close" />
-                        </svg>
-                    </button>
                 </div>
             </div>
 
@@ -229,7 +231,7 @@
             </div>
     
             <div class="footer__contacts">
-                <div class="footer__socials">
+                <!--<div class="footer__socials">
                     <a class="footer-social" href="#" title="Наш Telegram" target="_blank" rel="nofollow noreferrer">
                         <svg aria-hidden="true">
                             <use xlink:href="images/sprite.svg#tg" />
@@ -247,7 +249,7 @@
                             <use xlink:href="images/sprite.svg#yt" />
                         </svg>
                     </a>
-                </div>
+                </div>-->
                 Техподдержка:<br>
                 <a href="mailto:texpomosh@one-shopw.com">texpomosh@one-shopw.com</a>
             </div>
@@ -1331,6 +1333,66 @@
                 <div class="form__buttons">
                     <button class="js-popup-closer button button--green button--bordered button--h_48" type="button"><span>Отмена</span></button>
                     <button class="button button--green button--h_48" data-fancybox data-src="#api_key_added" type="button"><span>Сохранить</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div id="pay" class="box box--480" style="display: none">
+        <div class="box__title-block">
+            <p class="box__title">Оплата подписки</p>
+            <button class="js-popup-closer box__closer" type="button" title="Закрыть">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close" />
+                </svg>
+            </button>
+        </div>
+    
+        <form class="form" action="">
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="chain">Сеть</label>
+                </div>
+                <div class="input">
+                    <input id="chain" class="input__input" type="text" name="chain" value="" placeholder="TRC20">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="wallet">Кошелек</label>
+                </div>
+                <div class="input">
+                    <input id="wallet" class="input__input" type="text" name="wallet" value="TUzsVy3AHagwsewLV9b6U3xiLtGrE2PxHx" placeholder="Кошелек">
+                    <button class="js-copy-text input__button" type="button" type="button" title="Копировать">
+                        <svg class="green" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#copy" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    
+            <ul>
+                <li>Внесите на указанный кошелек оплату за подписку в размере <span class="color-green">35 USDT</span></li>
+                <li>После оплаты введите TxID, нажмите <span class="color-green">«Оплачено»</span></li>
+                <li>Ожидайте проверки платежа</li>
+                <li>В течение 24 часов подписка будет активирована </li>
+            </ul>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="trans">TxID*</label>
+                </div>
+                <div class="input">
+                    <input id="trans" class="input__input" type="text" name="trans" value="" placeholder="TxID">
+                </div>
+            </div>
+    
+            <div class="form__bottom-block form__bottom-block--sticky">
+                <div></div>
+                <div class="form__buttons">
+                    <button class="js-popup-closer button button--green button--bordered button--h_48" type="button"><span>Закрыть</span></button>
+                    <button class="button button--green button--h_48" type="button"><span>Оплачено</span></button>
                 </div>
             </div>
         </form>
