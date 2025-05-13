@@ -160,3 +160,23 @@ $(document).on('click', '.js-tabs-link', function () {
   $(this).closest('.tabs').find('.tab[data-target="'+ $(this).attr('data-target') +'"]').addClass('is-active');
   return false;
 });
+
+//смена типа операции
+$(document).on('change', '.js-action-type', function () {
+  if($(this).val() === 'vvod'){
+    $('.js-currency').text('руб.');
+  }else{
+    $('.js-currency').text('USDT');
+  }
+});
+
+//сумма операции
+$(document).on('keyup', '.js-summ', function () {
+  let sum = $(this).val();
+  if(sum.length > 0 && parseInt(sum) > 0){
+    $('.js-value').text(sum);
+  } else {
+    $('.js-value').text('-');
+  }
+
+});

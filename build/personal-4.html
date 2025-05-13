@@ -1412,12 +1412,12 @@
             <div class="form-field">
                 <div class="radio-group">
                     <label class="radio">
-                        <input type="radio" name="garant_type" value="vvod">
+                        <input class="js-action-type" type="radio" name="garant_type" value="vvod" checked>
                         <span class="radio__icon"></span>
                         <span class="radio__text">Ввод</span>
                     </label>
                     <label class="radio">
-                        <input type="radio" name="garant_type" value="vivod">
+                        <input class="js-action-type" type="radio" name="garant_type" value="vivod">
                         <span class="radio__icon"></span>
                         <span class="radio__text">Вывод</span>
                     </label>
@@ -1435,14 +1435,14 @@
     
             <div class="form-field">
                 <div class="form-field__title-block">
-                    <label class="form-field__title" for="cost">Сумма, руб.</label>
+                    <label class="form-field__title" for="cost">Сумма, <span class="js-currency">руб.</span></label>
                 </div>
                 <div class="input">
-                    <input id="cost" class="input__input" type="text" name="cost" value="" placeholder="введите сумму">
+                    <input id="cost" class="js-decimal-mask js-summ input__input" type="text" name="cost" value="" placeholder="введите сумму">
                 </div>
             </div>
     
-            <p>Итого к оплате: <span class="color-green">100 рублей</span></p>
+            <p>Итого к оплате: <span class="color-green"><span class="js-value">-</span> <span class="js-currency">руб.</span></span></p>
     
             <div class="form__bottom-block form__bottom-block--sticky">
                 <div></div>
