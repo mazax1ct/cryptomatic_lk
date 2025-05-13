@@ -1,0 +1,21 @@
+.status-icon {
+    height: 20px;
+    min-width: 20px;
+    width: 20px;
+
+    &--type_1 {
+        fill: #E73353;
+    }
+
+    &--type_2 {
+        fill: #E7B733;
+    }
+
+    &--type_3 {
+        fill: #6F6F6F;
+    }
+
+    &--type_4 {
+        fill: #00D7B0;
+    }
+}

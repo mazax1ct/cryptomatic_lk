@@ -24,8 +24,10 @@ function ts_makeSortable(table) {
     // We have a first row: assume it's the header, and make its contents clickable links
     for (var i=0;i<firstRow.cells.length;i++) {
         var cell = firstRow.cells[i];
-        var txt = ts_getInnerText(cell);
-        cell.innerHTML = '<a href="#" class="sortheader" onclick="ts_resortTable(this);return false;">'+txt+'<span class="sortarrow"><svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 11L8 15L12 11H4Z" fill="#6F6F6F"/><path d="M12 10L8 6L4 10L12 10Z" fill="#6F6F6F"/></svg></span></a>';
+        if(cell.classList.contains('js-sort')){
+          var txt = ts_getInnerText(cell);
+          cell.innerHTML = '<a href="#" class="sortheader" onclick="ts_resortTable(this);return false;">'+txt+'<span class="sortarrow"><svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 11L8 15L12 11H4Z" fill="#6F6F6F"/><path d="M12 10L8 6L4 10L12 10Z" fill="#6F6F6F"/></svg></span></a>';
+        }
     }
 }
 
@@ -112,6 +114,7 @@ function getParent(el, pTagName) {
 	else
 		return getParent(el.parentNode, pTagName);
 }
+
 function ts_sort_date(a,b) {
     // y2k notes: two digit years less than 50 are treated as 20XX, greater than 50 are treated as 19XX
     aa = ts_getInnerText(a.cells[SORT_COLUMN_INDEX]);

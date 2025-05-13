@@ -254,6 +254,17 @@
         }
     }
 
+    &--tab_link {
+        background-color: #10524A;
+        min-width: 102px;
+
+        &.is-active {
+            border-color: var(--primary);
+            background-color: var(--primary-a);
+            box-shadow: 0 0 4px rgba(25, 240, 209, 0.5);
+        }
+    }
+
     &--green,
     &--red {
         position: relative;

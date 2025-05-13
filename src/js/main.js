@@ -150,3 +150,13 @@ $(document).on("click", ".js-copy-text", function() {
   let text = _this.closest('.input').find('input').val();
   navigator.clipboard.writeText(text);
 });
+
+//табы
+$(document).on('click', '.js-tabs-link', function () {
+  $(this).closest('.tabs').find('.js-tabs-link.is-active').removeClass('is-active');
+  $(this).addClass('is-active');
+
+  $(this).closest('.tabs').find('.tab.is-active').removeClass('is-active');
+  $(this).closest('.tabs').find('.tab[data-target="'+ $(this).attr('data-target') +'"]').addClass('is-active');
+  return false;
+});
