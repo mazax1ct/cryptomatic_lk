@@ -165,74 +165,21 @@
 
             <div class="personal__right">
                 <div class="box">
-                    <div class="box__title-block">
-                        <div class="tabs-menu">
-                            <ul class="tabs-menu__list">
-                                <li class="tabs-menu__item">
-                                    <a class="tabs-menu__link is-active" href="#">Уроки 1–10</a>
-                                </li>
-                                <li class="tabs-menu__item">
-                                    <a class="tabs-menu__link" href="#">Уроки 11–20</a>
-                                </li>
-                                <li class="tabs-menu__item">
-                                    <a class="tabs-menu__link" href="#">Уроки 21–25</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="box__title-controls">
-                            <ul class="lessons">
-                                <li class="lessons__item">
-                                    <a class="lessons__link is-active" href="#">1</a>
-                                </li>
-                                <li class="lessons__item">
-                                    <a class="lessons__link is-passed" href="#">2</a>
-                                </li>
-                                <li class="lessons__item">
-                                    <a class="lessons__link is-passed" href="#">3</a>
-                                </li>
-                                <li class="lessons__item">
-                                    <a class="lessons__link is-passed" href="#">4</a>
-                                </li>
-                                <li class="lessons__item">
-                                    <a class="lessons__link is-available" href="#">5</a>
-                                </li>
-                                <li class="lessons__item">
-                                    <span class="lessons__link is-locked">6</span>
-                                </li>
-                                <li class="lessons__item">
-                                    <span class="lessons__link is-locked">7</span>
-                                </li>
-                                <li class="lessons__item">
-                                    <span class="lessons__link is-locked">8</span>
-                                </li>
-                                <li class="lessons__item">
-                                    <span class="lessons__link is-locked">9</span>
-                                </li>
-                                <li class="lessons__item">
-                                    <span class="lessons__link is-locked">10</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="course">
-                        <div class="course__video-block">
-                            <div class="course__video">
+                    <div class="bot">
+                        <div class="bot__block">
+                            <div class="bot__video">
                                 <div class="responsive-video">
                                     <iframe src="https://www.youtube.com/embed/2MRdtXWcgIw?si=Md8fbZ3NZx2U36-8" title="YouTube video player" frameborder="0"
                                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                 </div>
                             </div>
 
-                            <div class="course__text-block">
-                                <div class="course__title-block">
-                                    <h1 class="course__title"><span>Урок 1. Введение в обучающий курс</span> <span class="course__duration">23:54</span></h1>
-
-                                    <div class="course__status">Выполнено</div>
+                            <div class="bot__text-block">
+                                <div class="bot__title-block">
+                                    <h1 class="bot__title"><span>Описание стратегии</span> <span class="bot__duration">23:54</span></h1>
                                 </div>
 
-                                <div class="course__text">
+                                <div class="bot__text">
                                     <p>
                                         В данном занятии мы вместе с Вами правильно создадим и настроим API ключи для каждой биржи. Обсудим безопасность хранения таких ключей, а также затронем вопрос о сокращении торговых комиссий, которые помогут
                                         минимизировать расходы на работу торгового бота.
@@ -245,58 +192,80 @@
                             </div>
                         </div>
 
-                        <div class="course__adds">
-                            <div class="box box--warning">
-                                <div class="box__title-block box__title-block--mb_0">
-                                    <p class="box__title box__title--fs_16">Ограниченное предложение!</p>
+                        <div class="bot__block box">
+                            <div class="box__title-block">
+                                <p class="box__title box__title--fs_16">Подписка</p>
+                            </div>
 
-                                    <div class="box__title-controls">
-                                        <div class="timer">
-                                            <svg aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#timer" />
-                                            </svg>
-                                            21:33:28
+                            <div class="timer-block">
+                                <p class="color-green">Активна</p>
+
+                                <div class="timer">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#timer"></use>
+                                    </svg>
+                                    21:33:48
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <div class="form-field__title-block">
+                                    <label class="form-field__title" for="code">Ключ активации</label>
+                                </div>
+
+                                <div class="form-field__row">
+                                    <div class="form-field__row-block">
+                                        <div class="input">
+                                            <input id="code" class="input__input" type="text" name="code" value="sjH8L0vT6" placeholder="Ключ активации">
+                                            <button class="js-copy-text input__button" type="button" type="button" title="Копировать">
+                                                <svg class="green" aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#copy" />
+                                                </svg>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-
-                                <p class="box__text">Подпишитесь на обучающий курс в течение 3 дней после регистрации и получите скидку в 10%!</p>
-
-                                <a class="button button--red button--bordered button--h_48 button--wide" href="#">Оплатить курс!</a>
                             </div>
 
-                            <div class="course-adds box">
-                                <div class="box__title-block">
-                                    <p class="box__title box__title--fs_16">Приложения к видео</p>
-                                </div>
+                            <div class="sources">
+                                <p class="sources__title">Необходимые файлы:</p>
+                                <a class="sources__item sources__item--green" href="#">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#clip" />
+                                    </svg>
+                                    <span>Bot.exe</span>
+                                </a>
+                                <a class="sources__item sources__item--green" href="#">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#clip" />
+                                    </svg>
+                                    <span>Инструкция по использованию бота.pdf</span>
+                                </a>
+                            </div>
 
-                                <div class="sources">
-                                    <p class="sources__title">Файлы:</p>
-                                    <a class="sources__item sources__item--green" href="#">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#clip" />
-                                        </svg>
-                                        <span>Гайд-документ с помощью для выполнения заданий.pdf</span>
-                                    </a>
-                                </div>
+                            <div class="price-slider">
+                                <p class="price-slider__title">Расчет стоимости подписки</p>
 
-                                <div class="sources">
-                                    <p class="sources__title">Ссылки:</p>
-                                    <a class="sources__item sources__item--green" href="#">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#link" />
-                                        </svg>
-                                        <span>Какая-то внешняя ссылка (заголовок)</span>
-                                    </a>
-                                    <a class="sources__item sources__item--red" href="javascript:void(0)" data-fancybox="test" data-src="#test">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#form" />
-                                        </svg>
-                                        <span>Тестирование</span>
-                                    </a>
-                                </div>
+                                <div class="price-slider__inner">
+                                    <input id="price_slider" type="text" name="price_slider" value="" />
 
-                                <a class="course-adds__chat button button--green button--bordered button--h_48 button--wide" href="javascript:void(0)" data-fancybox="manager_chat" data-src="#manager_chat">Задать вопрос менеджеру</a>
+                                    <div class="price-slider__info">
+                                        <div>
+                                            <p class="price-slider__val"><span id="price_slider_month">6</span> мес.</p>
+                                            <p class="price-slider__val-title">длительность подписки</p>
+                                        </div>
+
+                                        <div>
+                                            <p class="price-slider__val"><span id="price_slider_cost">60</span> USDT</p>
+                                            <p class="price-slider__val-title">стоимость подписки</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box__buttons">
+                                <a class="button button--green button--bordered button--h_48" href="javascript:void(0)" data-fancybox="pay" data-src="#pay">Оплатить</a>
+                                <a class="button button--transparent button--h_48" href="javascript:void(0)" data-fancybox="manager_chat" data-src="#manager_chat">Связаться с менеджером</a>
                             </div>
                         </div>
                     </div>
@@ -1431,11 +1400,16 @@
             </button>
         </div>
     
-        <ul>
-            <li>Внесите на указанный кошелек оплату за подписку в размере <span class="color-green">35 USDT</span> (Сеть: TRC20)</li>
-        </ul>
-    
         <form class="form" action="">
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="chain">Сеть</label>
+                </div>
+                <div class="input">
+                    <input id="chain" class="input__input" type="text" name="chain" value="" placeholder="TRC20">
+                </div>
+            </div>
+    
             <div class="form-field">
                 <div class="form-field__title-block">
                     <label class="form-field__title" for="wallet">Кошелек</label>
@@ -1451,6 +1425,7 @@
             </div>
     
             <ul>
+                <li>Внесите на указанный кошелек оплату за подписку в размере <span class="color-green">35 USDT</span></li>
                 <li>После оплаты введите TxID, нажмите <span class="color-green">«Оплачено»</span></li>
                 <li>Ожидайте проверки платежа</li>
                 <li>В течение 24 часов подписка будет активирована </li>
@@ -1550,5 +1525,8 @@
 <script src="js/air-datepicker.js"></script>
 
 <script src="js/main.js"></script>
+
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/price-slider.js"></script>
 
 </html>

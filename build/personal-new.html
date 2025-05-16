@@ -87,6 +87,14 @@
                                         <span>Обучающий курс</span>
                                     </a>
                                 </li>
+                                <li class="personal-menu__item">
+                                    <a class="personal-menu__link" href="#">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#garant" />
+                                        </svg>
+                                        <span>Гарант</span>
+                                    </a>
+                                </li>
                                 <!--<li class="personal-menu__item">
                               <a class="personal-menu__link" href="#">
                                   <svg aria-hidden="true">
@@ -168,15 +176,8 @@
                                         <label class="form-field__title" for="login">Имя аккаунта</label>
                                     </div>
 
-                                    <div class="form-field__row">
-                                        <div class="form-field__row-block">
-                                            <div class="input">
-                                                <input id="login" class="input__input" type="text" name="login" value="moneymaker" placeholder="Логин">
-                                            </div>
-                                        </div>
-                                        <div class="form-field__row-block">
-                                            <button class="button button--green button--h_48" type="button" disabled><span>Сохранить</span></button>
-                                        </div>
+                                    <div class="input">
+                                        <input id="login" class="input__input" type="text" name="login" value="moneymaker" placeholder="Логин">
                                     </div>
                                 </div>
 
@@ -184,20 +185,14 @@
                                     <div class="form-field__title-block">
                                         <label class="form-field__title" for="new_pass">Пароль</label>
                                     </div>
-                                    <div class="form-field__row">
-                                        <div class="form-field__row-block">
-                                            <div class="input">
-                                                <input id="new_pass" class="input__input" type="password" name="new_pass" value="" placeholder="Пароль" autocomplete="off">
-                                                <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
-                                                    <svg aria-hidden="true">
-                                                        <use xlink:href="images/sprite.svg#show_pass" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="form-field__row-block">
-                                            <button class="button button--green button--h_48" type="button" disabled><span>Сохранить</span></button>
-                                        </div>
+
+                                    <div class="input">
+                                        <input id="new_pass" class="input__input" type="password" name="new_pass" value="" placeholder="Пароль" autocomplete="off">
+                                        <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#show_pass" />
+                                            </svg>
+                                        </button>
                                     </div>
                                 </div>
 
@@ -206,14 +201,9 @@
                                         <label class="form-field__title" for="telegram">Telegram</label>
                                     </div>
 
-                                    <div class="form-field__row">
-                                        <div class="form-field__row-block">
-                                            <div class="input">
-                                                <input id="telegram" class="input__input" type="text" name="telegram" value="" placeholder="@username">
-                                            </div>
-                                        </div>
-                                        <div class="form-field__row-block">
-                                            <button class="button button--green button--h_48" type="button" disabled><span>Сохранить</span></button>
+                                    <div class="form-field__row-block">
+                                        <div class="input">
+                                            <input id="telegram" class="input__input" type="text" name="telegram" value="" placeholder="@username">
                                         </div>
                                     </div>
                                 </div>
@@ -223,14 +213,9 @@
                                         <label class="form-field__title" for="uid">UID</label>
                                     </div>
 
-                                    <div class="form-field__row">
-                                        <div class="form-field__row-block">
-                                            <div class="input">
-                                                <input id="uid" class="input__input" type="text" name="uid" value="" placeholder="UID">
-                                            </div>
-                                        </div>
-                                        <div class="form-field__row-block">
-                                            <button class="button button--green button--h_48" type="button" disabled><span>Сохранить</span></button>
+                                    <div class="form-field__row-block">
+                                        <div class="input">
+                                            <input id="uid" class="input__input" type="text" name="uid" value="" placeholder="UID">
                                         </div>
                                     </div>
                                 </div>
@@ -1492,16 +1477,11 @@
             </button>
         </div>
     
-        <form class="form" action="">
-            <div class="form-field">
-                <div class="form-field__title-block">
-                    <label class="form-field__title" for="chain">Сеть</label>
-                </div>
-                <div class="input">
-                    <input id="chain" class="input__input" type="text" name="chain" value="" placeholder="TRC20">
-                </div>
-            </div>
+        <ul>
+            <li>Внесите на указанный кошелек оплату за подписку в размере <span class="color-green">35 USDT</span> (Сеть: TRC20)</li>
+        </ul>
     
+        <form class="form" action="">
             <div class="form-field">
                 <div class="form-field__title-block">
                     <label class="form-field__title" for="wallet">Кошелек</label>
@@ -1517,7 +1497,6 @@
             </div>
     
             <ul>
-                <li>Внесите на указанный кошелек оплату за подписку в размере <span class="color-green">35 USDT</span></li>
                 <li>После оплаты введите TxID, нажмите <span class="color-green">«Оплачено»</span></li>
                 <li>Ожидайте проверки платежа</li>
                 <li>В течение 24 часов подписка будет активирована </li>

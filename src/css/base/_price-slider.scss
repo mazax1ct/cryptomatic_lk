@@ -1,4 +1,8 @@
 .price-slider {
+    &:not(:last-child) {
+        margin-bottom: 44px;
+    }
+
     &__title {
         line-height: 1.25;
         display: block;

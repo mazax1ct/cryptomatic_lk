@@ -87,6 +87,14 @@
                                         <span>Обучающий курс</span>
                                     </a>
                                 </li>
+                                <li class="personal-menu__item">
+                                    <a class="personal-menu__link" href="#">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#garant" />
+                                        </svg>
+                                        <span>Гарант</span>
+                                    </a>
+                                </li>
                                 <!--<li class="personal-menu__item">
                               <a class="personal-menu__link" href="#">
                                   <svg aria-hidden="true">
@@ -1670,16 +1678,11 @@
             </button>
         </div>
     
-        <form class="form" action="">
-            <div class="form-field">
-                <div class="form-field__title-block">
-                    <label class="form-field__title" for="chain">Сеть</label>
-                </div>
-                <div class="input">
-                    <input id="chain" class="input__input" type="text" name="chain" value="" placeholder="TRC20">
-                </div>
-            </div>
+        <ul>
+            <li>Внесите на указанный кошелек оплату за подписку в размере <span class="color-green">35 USDT</span> (Сеть: TRC20)</li>
+        </ul>
     
+        <form class="form" action="">
             <div class="form-field">
                 <div class="form-field__title-block">
                     <label class="form-field__title" for="wallet">Кошелек</label>
@@ -1695,7 +1698,6 @@
             </div>
     
             <ul>
-                <li>Внесите на указанный кошелек оплату за подписку в размере <span class="color-green">35 USDT</span></li>
                 <li>После оплаты введите TxID, нажмите <span class="color-green">«Оплачено»</span></li>
                 <li>Ожидайте проверки платежа</li>
                 <li>В течение 24 часов подписка будет активирована </li>
