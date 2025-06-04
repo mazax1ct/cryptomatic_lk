@@ -146,6 +146,18 @@
         flex-direction: column;
     }
 
+    &--mh_vh {
+        @media(min-width: $hd) {
+            max-height: calc(100vh - 64px - 150px);
+        }
+
+        .tab {
+            @media(min-width: $hd) {
+                height: calc(100% - 48px - 24px);
+            }
+        }
+    }
+
     &__title-block {
         align-items: center;
         display: flex;

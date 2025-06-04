@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>CRYPTOBOT</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts_preload.html
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <main class="page-content">
+        <div class="personal">
+            <div class="personal__left">
+                //= template/personal-left.html
+            </div>
+
+            <div class="personal__right">
+                <div class="box box--full_height box--mh_vh box--flex_column tabs">
+                    <div class="box__title-block">
+                        <p class="box__title">История заявок</p>
+
+                        <div class="box__title-controls">
+                            <button class="js-tabs-link button button--tab_link button--h_48 is-active" type="button" data-target="1">Ввод</button>
+                            <button class="js-tabs-link button button--tab_link button--h_48" type="button" data-target="2">Вывод</button>
+                        </div>
+                    </div>
+
+                    <div class="tab is-active" data-target="1" style="flex-grow: 1">
+                        <div class="overflow-table" style="height: 100%">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID пользователя</th>
+                                        <th>Telegram</th>
+                                        <th>Сумма, руб.</th>
+                                        <th class="text-center" colspan="2">Статус</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="tab" data-target="2" style="flex-grow: 1">
+                        <div class="overflow-table" style="height: 100%">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID пользователя</th>
+                                        <th>Telegram</th>
+                                        <th>Сумма, руб.</th>
+                                        <th class="text-center" colspan="2">Статус</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>564</td>
+                                        <td><a href="#">@username</a></td>
+                                        <td>15000</td>
+                                        <td style="width: 160px">
+                                            <button class="button button--green button--h_48" type="button" style="min-width: 152px">Выполнено</button>
+                                        </td>
+                                        <td style="width: 160px">
+                                            <button class="button button--red button--h_48" type="button" style="min-width: 152px">Отказ</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    //= template/footer.html
+
+    //= template/popups.html
+</body>
+
+//= template/scripts.html
+<script src="js/sort-table.js"></script>
+
+</html>
