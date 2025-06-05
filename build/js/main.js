@@ -178,5 +178,11 @@ $(document).on('keyup', '.js-summ', function () {
   } else {
     $('.js-value').text('-');
   }
+});
 
+//показать блок продления подписки
+$(document).on('click', '.js-extend-sub', function () {
+  $(this).closest('.box__buttons').hide();
+  $('.js-sub-pay').show();
+  return false;
 });

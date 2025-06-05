@@ -227,7 +227,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="box">
+                        <!--<div class="box">
                             <div class="box__title-block">
                                 <p class="box__title">Состояние подписки</p>
                             </div>
@@ -249,11 +249,55 @@
                                 <button class="button button--green button--h_48" type="button">Продлить</button>
                                 <button class="button button--transparent button--h_48" type="button">Связаться с менеджером</button>
                             </div>
+                        </div>-->
+
+                        <div class="box">
+                            <div class="box__title-block">
+                                <p class="box__title box__title--fs_16">Подписка</p>
+                            </div>
+
+                            <div class="timer-block">
+                                <p class="color-red">Неактивна</p>
+
+                                <div class="timer is-disabled">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#timer"></use>
+                                    </svg>
+                                    00:00:00
+                                </div>
+                            </div>
+
+                            <p class="form-field form-field--big color-red text-center">Ваша подписка неактивна, для активации оплатите подписку</p>
+
+                            <div class="price-slider">
+                                <p class="price-slider__title">Расчет стоимости подписки</p>
+
+                                <div class="price-slider__inner">
+                                    <input class="js-price-slider" type="text" name="price_slider" value="" />
+
+                                    <div class="price-slider__info">
+                                        <div>
+                                            <p class="price-slider__val"><span class="js-price_slider_month">6</span> мес.</p>
+                                            <p class="price-slider__val-title">длительность подписки</p>
+                                        </div>
+
+                                        <div>
+                                            <p class="price-slider__val"><span class="js-price_slider_cost">60</span> USDT</p>
+                                            <p class="price-slider__val-title">стоимость подписки</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box__buttons box__buttons--mta">
+                                <a class="button button--green button--bordered button--h_48" href="javascript:void(0)" data-fancybox="pay_1" data-src="#pay">Оплатить</a>
+                                <a class="button button--transparent button--h_48" href="javascript:void(0)" data-fancybox="manager_chat_3" data-src="#manager_chat">Связаться с менеджером</a>
+                            </div>
                         </div>
 
                         <div class="box">
                             <div class="box__title-block">
-                                <p class="box__title">Состояние подписки</p>
+                                <p class="box__title">Подписка</p>
                             </div>
 
                             <div class="timer-block">
@@ -263,11 +307,11 @@
                                     <svg aria-hidden="true">
                                         <use xlink:href="images/sprite.svg#timer"></use>
                                     </svg>
-                                    <span class="js-countdown" data-time="May 25, 2025 15:37:25">21:33:48</span>
+                                    <span class="js-countdown" data-time="May 25, 2026 15:37:25">21:33:48</span>
                                 </div>
                             </div>
 
-                            <form class="form" action="">
+                            <!--<form class="form" action="">
                                 <div class="form-field">
                                     <div class="form-field__title-block">
                                         <label class="form-field__title" for="code">Ключ активации</label>
@@ -286,17 +330,44 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </form>-->
 
                             <div class="box__buttons">
-                                <button class="button button--green button--h_48" type="button">Подписаться</button>
-                                <button class="button button--transparent button--h_48" type="button">Связаться с менеджером</button>
+                                <button class="js-extend-sub button button--green button--h_48" type="button">Продлить</button>
+                                <button class="button button--transparent button--h_48" type="button" data-fancybox="manager_chat_1" data-src="#manager_chat">Связаться с менеджером</button>
+                            </div>
+
+                            <div class="js-sub-pay" style="display: none">
+                                <div class="price-slider">
+                                    <p class="price-slider__title">Расчет стоимости подписки</p>
+
+                                    <div class="price-slider__inner">
+                                        <input class="js-price-slider" type="text" name="price_slider" value="" />
+
+                                        <div class="price-slider__info">
+                                            <div>
+                                                <p class="price-slider__val"><span class="js-price_slider_month">6</span> мес.</p>
+                                                <p class="price-slider__val-title">длительность подписки</p>
+                                            </div>
+
+                                            <div>
+                                                <p class="price-slider__val"><span class="js-price_slider_cost">60</span> USDT</p>
+                                                <p class="price-slider__val-title">стоимость подписки</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="box__buttons box__buttons--mta">
+                                    <a class="button button--green button--bordered button--h_48" href="javascript:void(0)" data-fancybox="pay_2" data-src="#pay">Оплатить</a>
+                                    <a class="button button--transparent button--h_48" href="javascript:void(0)" data-fancybox="manager_chat_2" data-src="#manager_chat">Связаться с менеджером</a>
+                                </div>
                             </div>
                         </div>
 
                         <div class="box">
                             <div class="box__title-block">
-                                <p class="box__title">Состояние подписки</p>
+                                <p class="box__title">Подписка</p>
                             </div>
 
                             <div class="timer-block">
@@ -313,8 +384,7 @@
                             <p class="form-field text-center">Ваша заявка обрабатывается</p>
 
                             <div class="box__buttons">
-                                <button class="button button--green button--h_48" type="button">Подписаться</button>
-                                <button class="button button--transparent button--h_48" type="button">Связаться с менеджером</button>
+                                <button class="button button--transparent button--h_48" type="button" data-fancybox="manager_chat_4" data-src="#manager_chat">Связаться с менеджером</button>
                             </div>
                         </div>
 
@@ -330,7 +400,7 @@
 
                             <div class="box__buttons">
                                 <button class="button button--green button--h_48" type="button" data-fancybox="garant" data-src="#garant">Отправить заявку</button>
-                                <button class="button button--transparent button--h_48" type="button">Связаться с менеджером</button>
+                                <button class="button button--transparent button--h_48" type="button" data-fancybox="manager_chat_5" data-src="#manager_chat">Связаться с менеджером</button>
                             </div>
                         </div>
 
@@ -342,7 +412,7 @@
                             <p class="form-field">Ожидайте, менеджер свяжется с Вами в порядке очереди</p>
 
                             <div class="box__buttons">
-                                <button class="button button--transparent button--h_48" type="button">Связаться с менеджером</button>
+                                <button class="button button--transparent button--h_48" type="button" data-fancybox="manager_chat_6" data-src="#manager_chat">Связаться с менеджером</button>
                             </div>
                         </div>
                     </div>
@@ -1597,5 +1667,7 @@
 
 <script src="js/main.js"></script>
 <script src="js/countdown.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/price-slider.js"></script>
 
 </html>
